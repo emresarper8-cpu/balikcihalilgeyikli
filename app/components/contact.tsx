@@ -1,0 +1,56 @@
+export default function Contact() {
+  return (
+    <section
+      id="iletisim"
+      className="bg-[#04192d] text-white py-24"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+
+        <h2 className="text-5xl font-bold text-center mb-16">
+          Bize Ulaşın
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-12">
+
+          <div>
+
+            <h3 className="text-2xl font-bold mb-6">
+              Balıkçı Halil Geyikli
+            </h3>
+
+            <p className="mb-4">
+              📍 Geyikli / Ezine / Çanakkale
+            </p>
+
+            <p className="mb-4">
+              📞 +90 5XX XXX XX XX
+            </p>
+
+            <p className="mb-4">
+              🕒 Her Gün
+              <br />
+              11:00 - 23:00
+            </p>
+
+            <a
+              href="https://wa.me/905XXXXXXXXX"
+              target="_blank"
+              className="inline-block mt-6 bg-green-500 hover:bg-green-600 transition px-8 py-4 rounded-full font-bold"
+            >
+              WhatsApp'tan Yaz
+            </a>
+
+          </div>
+
+          <iframe
+            className="rounded-3xl w-full h-[400px]"
+            src="BURAYA_GOOGLE_MAPS_EMBED_LINKİ"
+            loading="lazy"
+          />
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
