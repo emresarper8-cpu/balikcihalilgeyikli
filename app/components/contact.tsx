@@ -33,7 +33,7 @@ export default function Contact() {
             </p>
 
             <a
-              href="https://wa.me/90 543 345 00 17"
+              href="https://wa.me/905433450017"
               target="_blank"
               className="inline-block mt-6 bg-green-500 hover:bg-green-600 transition px-8 py-4 rounded-full font-bold"
             >
