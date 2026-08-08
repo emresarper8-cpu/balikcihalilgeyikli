@@ -23,7 +23,7 @@ export default function Contact() {
             </p>
 
             <p className="mb-4">
-              📞 +90 5XX XXX XX XX
+              📞 +90 543 345 00 17
             </p>
 
             <p className="mb-4">
@@ -33,7 +33,7 @@ export default function Contact() {
             </p>
 
             <a
-              href="https://wa.me/905XXXXXXXXX"
+              href="https://wa.me/90 543 345 00 17"
               target="_blank"
               className="inline-block mt-6 bg-green-500 hover:bg-green-600 transition px-8 py-4 rounded-full font-bold"
             >
