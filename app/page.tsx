@@ -118,7 +118,80 @@ export default function Home() {
         </div>
 
       </section>
+<section className="bg-[#071826] py-20">
+  <div className="max-w-7xl mx-auto px-6">
 
+    <h2 className="text-4xl md:text-5xl font-bold text-center text-white">
+      Menümüzden
+    </h2>
+
+    <p className="text-center text-gray-400 mt-4 mb-12">
+      Denizden sofranıza, Balıkçı Halil'in lezzetleri
+    </p>
+
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="overflow-hidden rounded-3xl shadow-2xl">
+        <img
+          src="/sardalye.jpg"
+          alt="Sardalye"
+          className="w-full h-72 object-cover"
+        />
+        <div className="p-5 bg-[#0b2538]">
+          <h3 className="text-2xl font-bold text-white">
+            Sardalye
+          </h3>
+          <p className="text-gray-400 mt-2">
+            Günlük taze sardalye
+          </p>
+        </div>
+      </div>
+
+      <div className="overflow-hidden rounded-3xl shadow-2xl">
+        <img
+          src="/karides.jpg"
+          alt="Karides"
+          className="w-full h-72 object-cover"
+        />
+        <div className="p-5 bg-[#0b2538]">
+          <h3 className="text-2xl font-bold text-white">
+            Karides
+          </h3>
+          <p className="text-gray-400 mt-2">
+            Ege'den taze deniz lezzeti
+          </p>
+        </div>
+      </div>
+
+      <div className="overflow-hidden rounded-3xl shadow-2xl">
+        <img
+          src="/lakerda.jpg"
+          alt="Lakerda"
+          className="w-full h-72 object-cover"
+        />
+        <div className="p-5 bg-[#0b2538]">
+          <h3 className="text-2xl font-bold text-white">
+            Lakerda
+          </h3>
+          <p className="text-gray-400 mt-2">
+            Balıkçı Halil usulü lakerda
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div className="text-center mt-12">
+      <a
+        href="/menu"
+        className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-full font-bold transition"
+      >
+        Tüm Menüyü Gör
+      </a>
+    </div>
+
+  </div>
+</section>
 
       {/* KISA TANITIM */}
       <section className="py-20 px-6 bg-[#071c2d]">
