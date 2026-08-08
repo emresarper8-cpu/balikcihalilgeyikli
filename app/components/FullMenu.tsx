@@ -1,79 +1,79 @@
 export default function FullMenu() {
-  const categories = [
-    {
-      title: "🐟 Izgara",
-      items: [
-        ["Sardalya", "350₺"],
-        ["Çipura", "500₺"],
-        ["Levrek", "600₺"],
-      ],
-    },
-    {
-      title: "🍳 Tava",
-      items: [
-        ["Sardalya", "300₺"],
-        ["İstavrit", "350₺"],
-        ["Mezgit", "450₺"],
-        ["Dil Balığı", "400₺"],
-        ["Mercan", "450₺"],
-        ["Köfte", "500₺"],
-        ["Midye Tava", "350₺"],
-      ],
-    },
-    {
-      title: "🦐 Ara Sıcak",
-      items: [
-        ["Kalamar", "700₺"],
-        ["Kılçık Cips", "150₺"],
-        ["Patates Cips", "200₺"],
-      ],
-    },
-    {
-      title: "🐙 Deniz Ürünleri",
-      items: [
-        ["Ahtapot", "550₺"],
-        ["Karides", "500₺"],
-      ],
-    },
-    {
-      title: "🌿 Ege Mezeleri",
-      items: [
-        ["Lakerda", "450₺"],
-        ["Levrek Marin", "550₺"],
-        ["Hamsi Marin", "200₺"],
-        ["Sardalya Marin", "300₺"],
-        ["Deniz Börülcesi", "200₺"],
-        ["Yoğurtlu", "200₺"],
-      ],
-    },
-    {
-      title: "🥪 Ekmek Arası",
-      items: [
-        ["Sardalya", "200₺"],
-        ["Mezgit", "300₺"],
-        ["Dil Balığı", "300₺"],
-      ],
-    },
-    {
-      title: "🥗 Salatalar",
-      items: [
-        ["Çoban Salatası", "200–300₺"],
-      ],
-    },
-    {
-      title: "🥤 İçecekler",
-      items: [
-        ["Meşrubatlar", "70₺"],
-        ["Limonata", "70₺"],
-        ["Şalgam Suyu", "65₺"],
-        ["Turşu Suyu", "70₺"],
-        ["Su", "20₺"],
-        ["Soda", "40₺"],
-        ["Şişe Meşrubat", "60₺"],
-      ],
-    },
-  ];
+ const categories = [
+  {
+    title: "🍳 Tava",
+    items: [
+      ["Sardalya", "300₺"],
+      ["İstavrit", "350₺"],
+      ["Mezgit", "450₺"],
+      ["Dil Balığı", "400₺"],
+      ["Mercan", "450₺"],
+      ["Köfte", "500₺"],
+      ["Midye Tava", "350₺"],
+    ],
+  },
 
+  {
+    title: "🦐 Ara Sıcak",
+    items: [
+      ["Kalamar", "700₺"],
+      ["Kılçık Cips", "150₺"],
+      ["Patates Cips", "200₺"],
+    ],
+  },
+
+  {
+    title: "🥪 Ekmek Arası",
+    items: [
+      ["Sardalya", "200₺"],
+      ["Mezgit", "300₺"],
+      ["Dil Balığı", "300₺"],
+    ],
+  },
+
+  {
+    title: "🥗 Salatalar",
+    items: [
+      ["Çoban Salatası", "200–300₺"],
+    ],
+  },
+
+  {
+    title: "🔥 Izgara",
+    items: [
+      ["Sardalya", "350₺"],
+      ["Çipura", "500₺"],
+      ["Levrek", "600₺"],
+    ],
+  },
+
+  {
+    title: "🥗 Mezeler",
+    items: [
+      ["Ahtapot", "550₺"],
+      ["Karides", "500₺"],
+      ["Lakerda", "450₺"],
+      ["Levrek Marin", "550₺"],
+      ["Hamsi Marin", "200₺"],
+      ["Sardalya Marin", "300₺"],
+      ["Deniz Börülcesi", "200₺"],
+      ["Yoğurtlu", "200₺"],
+    ],
+  },
+
+  {
+    title: "🥤 İçecekler",
+    items: [
+      ["Meşrubatlar", "70₺"],
+      ["Limonata", "70₺"],
+      ["Şalgam Suyu", "65₺"],
+      ["Turşu Suyu", "70₺"],
+      ["Su", "20₺"],
+      ["Soda", "40₺"],
+      ["Şişe Meşrubat", "60₺"],
+    ],
+  },
+];
   return (
     <section className="bg-[#08253f] py-24 text-white">
       <div className="max-w-6xl mx-auto px-6">
