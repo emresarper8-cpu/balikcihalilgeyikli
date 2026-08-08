@@ -85,7 +85,9 @@ export default function Home() {
           <h2 className="text-2xl md:text-4xl text-cyan-300 mt-3 font-semibold">
             Geyikli
           </h2>
-
+<p className="text-xl md:text-2xl text-white/90 mt-5 font-medium">
+  Denizin Bereketi, Geyikli'nin Lezzeti.
+</p>
           <p className="mt-7 text-gray-200 text-base md:text-xl max-w-2xl mx-auto leading-relaxed">
             Günlük taze balıklar, Ege mezeleri ve huzurlu bahçemizde
             güzel bir sofraya bekleriz.
