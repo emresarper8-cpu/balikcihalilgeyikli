@@ -3,75 +3,118 @@ export default function FullMenu() {
     {
       title: "🐟 Izgara",
       items: [
-        ["Çipura", "700₺"],
-        ["Levrek", "750₺"],
-        ["Sardalya", "450₺"],
+        ["Sardalya", "350₺"],
+        ["Çipura", "500₺"],
+        ["Levrek", "600₺"],
+      ],
+    },
+    {
+      title: "🍳 Tava",
+      items: [
+        ["Sardalya", "300₺"],
+        ["İstavrit", "350₺"],
         ["Mezgit", "450₺"],
+        ["Dil Balığı", "400₺"],
+        ["Mercan", "450₺"],
+        ["Köfte", "500₺"],
+        ["Midye Tava", "350₺"],
       ],
     },
     {
-      title: "🦑 Deniz Ürünleri",
+      title: "🦐 Ara Sıcak",
       items: [
-        ["Kalamar Tava", "650₺"],
-        ["Karides", "650₺"],
-        ["Ahtapot Salatası", "650₺"],
+        ["Kalamar", "700₺"],
+        ["Kılçık Cips", "150₺"],
+        ["Patates Cips", "200₺"],
       ],
     },
     {
-      title: "🥗 Ege Mezeleri",
+      title: "🐙 Deniz Ürünleri",
       items: [
-        ["Deniz Börülcesi", "250₺"],
-        ["Lakerda", "350₺"],
-        ["Haydari", "250₺"],
-        ["Atom", "250₺"],
-        ["Girit Ezmesi", "250₺"],
+        ["Ahtapot", "550₺"],
+        ["Karides", "500₺"],
+      ],
+    },
+    {
+      title: "🌿 Ege Mezeleri",
+      items: [
+        ["Lakerda", "450₺"],
+        ["Levrek Marin", "550₺"],
+        ["Hamsi Marin", "200₺"],
+        ["Sardalya Marin", "300₺"],
+        ["Deniz Börülcesi", "200₺"],
+        ["Yoğurtlu", "200₺"],
+      ],
+    },
+    {
+      title: "🥪 Ekmek Arası",
+      items: [
+        ["Sardalya", "200₺"],
+        ["Mezgit", "300₺"],
+        ["Dil Balığı", "300₺"],
+      ],
+    },
+    {
+      title: "🥗 Salatalar",
+      items: [
+        ["Çoban Salatası", "200–300₺"],
       ],
     },
     {
       title: "🥤 İçecekler",
       items: [
-        ["Kola", "80₺"],
-        ["Fanta", "80₺"],
-        ["Ayran", "70₺"],
-        ["Su", "30₺"],
+        ["Meşrubatlar", "70₺"],
+        ["Limonata", "70₺"],
+        ["Şalgam Suyu", "65₺"],
+        ["Turşu Suyu", "70₺"],
+        ["Su", "20₺"],
+        ["Soda", "40₺"],
+        ["Şişe Meşrubat", "60₺"],
       ],
     },
   ];
 
   return (
-    <section className="bg-[#08253f] py-24">
+    <section className="bg-[#08253f] py-24 text-white">
       <div className="max-w-6xl mx-auto px-6">
-
-        <h2 className="text-5xl font-bold text-center text-white mb-16">
-          Dijital Menü
+        <h2 className="text-5xl font-bold text-center mb-4">
+          Balıkçı Halil
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <p className="text-center text-cyan-300 text-lg mb-12">
+          Dijital Menü
+        </p>
 
-          {categories.map((cat) => (
+        <div className="grid md:grid-cols-2 gap-8">
+          {categories.map((category) => (
             <div
-              key={cat.title}
-              className="bg-[#10304f] rounded-3xl p-8"
+              key={category.title}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
             >
-              <h3 className="text-3xl font-bold text-cyan-400 mb-6">
-                {cat.title}
+              <h3 className="text-2xl font-bold mb-6 text-cyan-300">
+                {category.title}
               </h3>
 
-              {cat.items.map(([name, price]) => (
-                <div
-                  key={name}
-                  className="flex justify-between border-b border-cyan-800 py-4"
-                >
-                  <span>{name}</span>
-                  <span className="font-bold text-yellow-300">
-                    {price}
-                  </span>
-                </div>
-              ))}
+              <div className="space-y-4">
+                {category.items.map(([name, price]) => (
+                  <div
+                    key={name}
+                    className="flex items-center justify-between border-b border-white/10 pb-3"
+                  >
+                    <span className="text-lg">{name}</span>
+                    <span className="text-lg font-bold text-white">
+                      {price}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
-
         </div>
+
+        <p className="text-center text-cyan-300 mt-12 text-sm">
+          🌊 Denizden Gelen Tazelik - Afiyet Olsun! 🌊
+        </p>
       </div>
     </section>
   );
