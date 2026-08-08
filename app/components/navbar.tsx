@@ -53,7 +53,7 @@ export default function Navbar() {
 
         {/* MASAÜSTÜ ARA */}
         <a
-          href="tel:+905551112233"
+          href="tel:+905433450017"
           className="hidden md:block bg-cyan-500 hover:bg-cyan-600 transition px-6 py-3 rounded-full font-semibold text-white shadow-lg"
         >
           📞 Ara
@@ -108,7 +108,7 @@ export default function Navbar() {
             </a>
 
             <a
-              href="tel:+905551112233"
+              href="tel:+905433450017"
               className="bg-cyan-500 text-center py-3 rounded-full font-semibold"
             >
               📞 Ara
