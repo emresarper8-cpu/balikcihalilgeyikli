@@ -7,6 +7,17 @@ const images = [
   "/lakerda.jpg",
   "/karides.jpg",
   "/ahtapot.jpg",
+  "/bahce.jpg",
+  "/bahce1.jpg",
+  "/bahce2.jpg",
+  "/balık.jpg",
+  "/balık1.jpg",
+  "/kapı.jpg",
+  "/meze.jpg",
+  "/teras.jpg",
+  "/teras1.jpg",
+  
+
 ];
 
 export default function Gallery() {
