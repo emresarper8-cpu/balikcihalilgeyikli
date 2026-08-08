@@ -47,7 +47,14 @@ export default function Contact() {
             src="https://www.google.com/maps?q=Balıkçı%20Halil%20Geyikli&output=embed"
             loading="lazy"
           />
-
+<a
+  href="https://www.google.com/maps/dir/?api=1&destination=Balıkçı%20Halil%20Geyikli"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block mt-6 bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-full font-semibold text-white"
+>
+  📍 Yol Tarifi Al
+</a>
         </div>
 
       </div>
