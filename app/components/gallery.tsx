@@ -2,7 +2,6 @@ import Image from "next/image";
 
 const images = [
   "/cipura.jpg",
-  "/kalamar.jpg",
   "/sardalye.jpg",
   "/lakerda.jpg",
   "/karides.jpg",
@@ -16,7 +15,7 @@ const images = [
   "/meze.jpg",
   "/teras.jpg",
   "/teras1.jpg",
-  
+
 
 ];
 
