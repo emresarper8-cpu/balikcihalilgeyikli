@@ -13,7 +13,7 @@ export default function CTA() {
         </p>
 
         <a
-          href="tel:+90XXXXXXXXXX"
+          href="tel:+905433450017"
           className="inline-block mt-10 bg-cyan-500 hover:bg-cyan-600 transition px-10 py-5 rounded-full text-xl font-bold"
         >
           📞 Hemen Ara
