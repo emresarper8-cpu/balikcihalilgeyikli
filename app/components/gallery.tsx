@@ -12,7 +12,6 @@ const images = [
   "/balık.jpg",
   "/balık1.jpg",
   "/kapı.jpg",
-  "/meze.jpg",
   "/teras.jpg",
   "/teras1.jpg",
 
