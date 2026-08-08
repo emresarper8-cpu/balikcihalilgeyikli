@@ -44,7 +44,7 @@ export default function Contact() {
 
           <iframe
             className="rounded-3xl w-full h-[400px]"
-            src="BURAYA_GOOGLE_MAPS_EMBED_LINKİ"
+            src="https://www.google.com/maps?q=Balıkçı%20Halil%20Geyikli&output=embed"
             loading="lazy"
           />
 
