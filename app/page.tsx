@@ -1,3 +1,4 @@
+import Navbar from "./components/navbar";
 import About from "./components/about";
 import Gallery from "./components/gallery";
 import Reviews from "./components/reviews";
@@ -9,55 +10,10 @@ import CTA from "./components/cta";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#08253f] text-white">
+    <main>
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full bg-[#04192d]/90 backdrop-blur-md border-b border-cyan-900/60 z-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-
-          <a href="#" className="shrink-0">
-            <h1 className="text-xl md:text-2xl font-extrabold">
-              Balıkçı <span className="text-cyan-400">Halil</span>
-            </h1>
-            <p className="text-yellow-300 text-[9px] md:text-[10px] tracking-[3px]">
-              SINCE 1999
-            </p>
-          </a>
-
-          <div className="hidden md:flex items-center gap-8 text-white">
-            <a href="#" className="hover:text-cyan-400 transition">
-              Anasayfa
-            </a>
-
-            <a href="/menu" className="hover:text-cyan-400 transition">
-              Dijital Menü
-            </a>
-
-            <a href="#galeri" className="hover:text-cyan-400 transition">
-              Galeri
-            </a>
-
-            <a href="#iletisim" className="hover:text-cyan-400 transition">
-              İletişim
-            </a>
-
-            <a
-              href="tel:+905433450017"
-              className="bg-cyan-500 hover:bg-cyan-600 px-5 py-2.5 rounded-full font-semibold transition"
-            >
-              📞 Ara
-            </a>
-          </div>
-
-          <a
-            href="/menu"
-            className="md:hidden bg-cyan-500 px-4 py-2 rounded-full text-sm font-semibold"
-          >
-            Menü
-          </a>
-
-        </div>
-      </nav>
+      <Navbar />
 
 
       {/* HERO */}
@@ -85,13 +41,6 @@ export default function Home() {
           <h2 className="text-2xl md:text-4xl text-cyan-300 mt-3 font-semibold">
             Geyikli
           </h2>
-<p className="text-xl md:text-2xl text-white/90 mt-5 font-medium">
-  Denizin Bereketi, Geyikli'nin Lezzeti.
-</p>
-          <p className="mt-7 text-gray-200 text-base md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Günlük taze balıklar, Ege mezeleri ve huzurlu bahçemizde
-            güzel bir sofraya bekleriz.
-          </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
 
@@ -118,80 +67,82 @@ export default function Home() {
         </div>
 
       </section>
-<section className="bg-[#071826] py-20">
-  <div className="max-w-7xl mx-auto px-6">
 
-    <h2 className="text-4xl md:text-5xl font-bold text-center text-white">
-      Menümüzden
-    </h2>
 
-    <p className="text-center text-gray-400 mt-4 mb-12">
-      Denizden sofranıza, Balıkçı Halil'in lezzetleri
-    </p>
+      {/* MENÜDEN */}
+      <section className="py-20 px-6 bg-[#071c2d]">
 
-    <div className="grid md:grid-cols-3 gap-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-white">
+          Menümüzden
+        </h2>
 
-      <div className="overflow-hidden rounded-3xl shadow-2xl">
-        <img
-          src="/sardalye.jpg"
-          alt="Sardalye"
-          className="w-full h-72 object-cover"
-        />
-        <div className="p-5 bg-[#0b2538]">
-          <h3 className="text-2xl font-bold text-white">
-            Sardalye
-          </h3>
-          <p className="text-gray-400 mt-2">
-            Günlük taze sardalye
-          </p>
+        <p className="text-center text-gray-400 mt-4 mb-12">
+          Denizden sofranıza, Balıkçı Halil'in lezzetleri
+        </p>
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+
+          <div className="overflow-hidden rounded-3xl shadow-2xl">
+            <img
+              src="/sardalye.jpg"
+              alt="Sardalye"
+              className="w-full h-72 object-cover"
+            />
+            <div className="p-5 bg-[#0b2538]">
+              <h3 className="text-2xl font-bold text-white">
+                Sardalye
+              </h3>
+              <p className="text-gray-400 mt-2">
+                Günlük taze sardalye
+              </p>
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-3xl shadow-2xl">
+            <img
+              src="/karides.jpg"
+              alt="Karides"
+              className="w-full h-72 object-cover"
+            />
+            <div className="p-5 bg-[#0b2538]">
+              <h3 className="text-2xl font-bold text-white">
+                Karides
+              </h3>
+              <p className="text-gray-400 mt-2">
+                Ege'den taze deniz lezzeti
+              </p>
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-3xl shadow-2xl">
+            <img
+              src="/lakerda.jpg"
+              alt="Lakerda"
+              className="w-full h-72 object-cover"
+            />
+            <div className="p-5 bg-[#0b2538]">
+              <h3 className="text-2xl font-bold text-white">
+                Lakerda
+              </h3>
+              <p className="text-gray-400 mt-2">
+                Balıkçı Halil usulü lakerda
+              </p>
+            </div>
+          </div>
+
         </div>
-      </div>
 
-      <div className="overflow-hidden rounded-3xl shadow-2xl">
-        <img
-          src="/karides.jpg"
-          alt="Karides"
-          className="w-full h-72 object-cover"
-        />
-        <div className="p-5 bg-[#0b2538]">
-          <h3 className="text-2xl font-bold text-white">
-            Karides
-          </h3>
-          <p className="text-gray-400 mt-2">
-            Ege'den taze deniz lezzeti
-          </p>
+        <div className="text-center mt-12">
+          <a
+            href="/menu"
+            className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-full font-bold transition"
+          >
+            Tüm Menüyü Gör
+          </a>
         </div>
-      </div>
 
-      <div className="overflow-hidden rounded-3xl shadow-2xl">
-        <img
-          src="/lakerda.jpg"
-          alt="Lakerda"
-          className="w-full h-72 object-cover"
-        />
-        <div className="p-5 bg-[#0b2538]">
-          <h3 className="text-2xl font-bold text-white">
-            Lakerda
-          </h3>
-          <p className="text-gray-400 mt-2">
-            Balıkçı Halil usulü lakerda
-          </p>
-        </div>
-      </div>
+      </section>
 
-    </div>
-
-    <div className="text-center mt-12">
-      <a
-        href="/menu"
-        className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-full font-bold transition"
-      >
-        Tüm Menüyü Gör
-      </a>
-    </div>
-
-  </div>
-</section>
 
       {/* KISA TANITIM */}
       <section className="py-20 px-6 bg-[#071c2d]">
