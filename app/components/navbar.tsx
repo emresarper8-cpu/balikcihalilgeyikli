@@ -6,49 +6,50 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-slate-900/90 backdrop-blur">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full bg-[#04192d]/90 backdrop-blur-md border-b border-cyan-900/60 z-50">
+
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
 
         {/* LOGO */}
-        <div>
-          <h1 className="text-2xl md:text-3xl font-extrabold text-white">
-            Balıkçı <span className="text-cyan-400">Halil</span>
-          </h1>
-
-          <p className="text-yellow-300 text-[10px] md:text-xs tracking-[3px]">
-            SINCE 1999
-          </p>
-        </div>
+        <a href="/" className="shrink-0">
+          <img
+            src="/logo.png"
+            alt="Balıkçı Halil Geyikli"
+            className="h-16 md:h-20 w-auto object-contain"
+          />
+        </a>
 
         {/* MASAÜSTÜ MENÜ */}
         <div className="hidden md:flex gap-10 text-white font-medium">
+
           <a
-            href="#"
+            href="/"
             className="hover:text-cyan-400 transition"
           >
             Anasayfa
           </a>
 
           <a
-            href="#menu"
+            href="/menu"
             className="hover:text-cyan-400 transition"
           >
             Menü
           </a>
 
           <a
-            href="#galeri"
+            href="/#galeri"
             className="hover:text-cyan-400 transition"
           >
             Galeri
           </a>
 
           <a
-            href="#iletisim"
+            href="/#iletisim"
             className="hover:text-cyan-400 transition"
           >
             İletişim
           </a>
+
         </div>
 
         {/* MASAÜSTÜ ARA */}
@@ -73,10 +74,11 @@ export default function Navbar() {
       {/* MOBİL MENÜ */}
       {menuOpen && (
         <div className="md:hidden bg-slate-900 border-t border-white/10 px-6 py-5">
+
           <div className="flex flex-col gap-5 text-white font-medium">
 
             <a
-              href="#"
+              href="/"
               onClick={() => setMenuOpen(false)}
               className="hover:text-cyan-400 transition"
             >
@@ -84,7 +86,7 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#menu"
+              href="/menu"
               onClick={() => setMenuOpen(false)}
               className="hover:text-cyan-400 transition"
             >
@@ -92,7 +94,7 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#galeri"
+              href="/#galeri"
               onClick={() => setMenuOpen(false)}
               className="hover:text-cyan-400 transition"
             >
@@ -100,7 +102,7 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#iletisim"
+              href="/#iletisim"
               onClick={() => setMenuOpen(false)}
               className="hover:text-cyan-400 transition"
             >
@@ -115,8 +117,10 @@ export default function Navbar() {
             </a>
 
           </div>
+
         </div>
       )}
+
     </nav>
   );
 }
