@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* LOGO */}
         <a href="/" className="shrink-0">
           <img
-            src="/logo.png"
+            src="/logo.jpg"
             alt="Balıkçı Halil Geyikli"
             className="h-16 md:h-20 w-auto object-contain"
           />
