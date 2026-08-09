@@ -42,7 +42,7 @@ export default function Navbar() {
           >
             <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 group-hover:border-cyan-400 transition shadow-md">
               <img
-                src="/balik.jpg"
+                src="/balık.jpg"
                 alt="Balık menüsü"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
               />
@@ -76,7 +76,7 @@ export default function Navbar() {
           >
             <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 group-hover:border-cyan-400 transition shadow-md">
               <img
-                src="/kapi.jpg"
+                src="/kapı.jpg"
                 alt="Balıkçı Halil"
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
               />
@@ -129,7 +129,7 @@ export default function Navbar() {
               className="flex items-center gap-3 hover:text-cyan-300 transition"
             >
               <img
-                src="/balik.jpg"
+                src="/balık.jpg"
                 alt=""
                 className="w-10 h-10 rounded-full object-cover"
               />
@@ -155,7 +155,7 @@ export default function Navbar() {
               className="flex items-center gap-3 hover:text-cyan-300 transition"
             >
               <img
-                src="/kapi.jpg"
+                src="/kapı.jpg"
                 alt=""
                 className="w-10 h-10 rounded-full object-cover"
               />
