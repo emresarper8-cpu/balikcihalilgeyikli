@@ -58,6 +58,48 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://balikcihalilgeyikli.com/#restaurant",
+  name: "Balıkçı Halil Geyikli",
+  url: "https://balikcihalilgeyikli.com/",
+  telephone: "+905433450017",
+  priceRange: "₺₺",
+  servesCuisine: [
+    "Balık",
+    "Deniz ürünleri",
+    "Ege mutfağı",
+  ],
+  menu: "https://balikcihalilgeyikli.com/menu",
+
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Vatan Sk. 5",
+    addressLocality: "Geyikli",
+    addressRegion: "Çanakkale",
+    postalCode: "17610",
+    addressCountry: "TR",
+  },
+
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "09:00",
+      closes: "22:30",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,6 +108,12 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={`${geist.className} bg-[#08253f] text-white`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
         {children}
       </body>
     </html>
