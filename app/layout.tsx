@@ -33,6 +33,11 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: "/",
+    languages: {
+      "tr-TR": "/",
+      "en-US": "/en",
+      "x-default": "/",
+    },
   },
 
   robots: {
