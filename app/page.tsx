@@ -11,10 +11,8 @@ import CTA from "./components/cta";
 export default function Home() {
   return (
     <main>
-
       {/* NAVBAR */}
       <Navbar />
-
 
       {/* HERO */}
       <section
@@ -25,25 +23,22 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-
         <div className="absolute inset-0 bg-black/65"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto pt-20">
-
           <p className="text-yellow-300 tracking-[7px] text-sm md:text-base font-semibold">
             SINCE 1999
           </p>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mt-5 leading-tight">
-            Balıkçı <span className="text-cyan-400">Halil</span>
+            Balıkçı <span className="text-cyan-400">Halil</span> Geyikli
           </h1>
 
           <h2 className="text-2xl md:text-4xl text-cyan-300 mt-3 font-semibold">
-            Geyikli
+            Balık Restoranı
           </h2>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-
             <a
               href="/menu"
               className="bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full font-bold text-lg transition shadow-lg"
@@ -57,43 +52,36 @@ export default function Home() {
             >
               📸 Galeriyi Gör
             </a>
-
           </div>
-
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-sm">
           ↓ Keşfet
         </div>
-
       </section>
-
 
       {/* MENÜDEN */}
       <section className="py-20 px-6 bg-[#071c2d]">
-
         <h2 className="text-4xl md:text-5xl font-bold text-center text-white">
-          Menümüzden
+          Geyikli'de Taze Balık ve Deniz Lezzetleri
         </h2>
 
         <p className="text-center text-gray-400 mt-4 mb-12">
-          Denizden sofranıza, Balıkçı Halil'in lezzetleri
+          Balıkçı Halil Geyikli menüsünden günlük taze balıklar, deniz ürünleri
+          ve Ege mezeleri
         </p>
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-
           <div className="overflow-hidden rounded-3xl shadow-2xl">
             <img
               src="/sardalye.jpg"
-              alt="Sardalye"
+              alt="Balıkçı Halil Geyikli taze sardalye"
               className="w-full h-72 object-cover"
             />
             <div className="p-5 bg-[#0b2538]">
-              <h3 className="text-2xl font-bold text-white">
-                Sardalye
-              </h3>
+              <h3 className="text-2xl font-bold text-white">Sardalye</h3>
               <p className="text-gray-400 mt-2">
-                Günlük taze sardalye
+                Geyikli'de günlük taze sardalye
               </p>
             </div>
           </div>
@@ -101,13 +89,11 @@ export default function Home() {
           <div className="overflow-hidden rounded-3xl shadow-2xl">
             <img
               src="/karides.jpg"
-              alt="Karides"
+              alt="Balıkçı Halil Geyikli karides"
               className="w-full h-72 object-cover"
             />
             <div className="p-5 bg-[#0b2538]">
-              <h3 className="text-2xl font-bold text-white">
-                Karides
-              </h3>
+              <h3 className="text-2xl font-bold text-white">Karides</h3>
               <p className="text-gray-400 mt-2">
                 Ege'den taze deniz lezzeti
               </p>
@@ -117,19 +103,16 @@ export default function Home() {
           <div className="overflow-hidden rounded-3xl shadow-2xl">
             <img
               src="/lakerda.jpg"
-              alt="Lakerda"
+              alt="Balıkçı Halil Geyikli lakerda"
               className="w-full h-72 object-cover"
             />
             <div className="p-5 bg-[#0b2538]">
-              <h3 className="text-2xl font-bold text-white">
-                Lakerda
-              </h3>
+              <h3 className="text-2xl font-bold text-white">Lakerda</h3>
               <p className="text-gray-400 mt-2">
                 Balıkçı Halil usulü lakerda
               </p>
             </div>
           </div>
-
         </div>
 
         <div className="text-center mt-12">
@@ -140,16 +123,13 @@ export default function Home() {
             Tüm Menüyü Gör
           </a>
         </div>
-
       </section>
-
 
       {/* KISA TANITIM */}
       <section className="py-20 px-6 bg-[#071c2d]">
         <div className="max-w-5xl mx-auto text-center">
-
           <p className="text-cyan-400 font-semibold tracking-[4px] text-sm">
-            GEYİKLİ'DE TAZE BALIK
+            GEYİKLİ'DE BALIK RESTORANI
           </p>
 
           <h2 className="text-3xl md:text-5xl font-bold mt-4">
@@ -157,8 +137,10 @@ export default function Home() {
           </h2>
 
           <p className="text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed">
-            Taze balıklarımız, Ege usulü mezelerimiz ve samimi bahçemizle
-            Geyikli'de güzel bir balık sofrası için sizleri bekliyoruz.
+            Balıkçı Halil Geyikli olarak günlük taze balıklarımız, deniz
+            ürünlerimiz ve Ege usulü mezelerimizle Geyikli'de keyifli bir
+            balık sofrası için sizleri bekliyoruz. Samimi bahçemizde taze
+            deniz lezzetlerinin tadını çıkarabilirsiniz.
           </p>
 
           <a
@@ -167,46 +149,36 @@ export default function Home() {
           >
             Menüyü incele →
           </a>
-
         </div>
       </section>
-
 
       {/* İSTATİSTİK */}
       <Stats />
 
-
       {/* HAKKIMIZDA */}
       <About />
-
 
       {/* GALERİ */}
       <div id="galeri">
         <Gallery />
       </div>
 
-
       {/* YORUMLAR */}
       <Reviews />
 
-
       {/* ÇAĞRI */}
       <CTA />
-
 
       {/* İLETİŞİM */}
       <div id="iletisim">
         <Contact />
       </div>
 
-
       {/* WHATSAPP */}
       <WhatsApp />
 
-
       {/* FOOTER */}
       <Footer />
-
     </main>
   );
 }
