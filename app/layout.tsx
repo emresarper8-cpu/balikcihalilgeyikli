@@ -62,15 +62,21 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "@id": "https://balikcihalilgeyikli.com/#restaurant",
+
   name: "Balıkçı Halil Geyikli",
   url: "https://balikcihalilgeyikli.com/",
+
+  image: "https://balikcihalilgeyikli.com/logo.jpg",
+
   telephone: "+905433450017",
   priceRange: "₺₺",
+
   servesCuisine: [
     "Balık",
     "Deniz ürünleri",
     "Ege mutfağı",
   ],
+
   menu: "https://balikcihalilgeyikli.com/menu",
 
   address: {
