@@ -1,3 +1,4 @@
+```tsx
 "use client";
 
 import { useState } from "react";
@@ -7,7 +8,6 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#061a2e]/95 via-[#0b3552]/95 to-[#061a2e]/95 backdrop-blur-md border-b border-cyan-400/30 z-50 shadow-xl">
-
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 flex items-center justify-between">
 
         {/* LOGO */}
@@ -21,7 +21,6 @@ export default function Navbar() {
           </div>
         </a>
 
-
         {/* MASAÜSTÜ MENÜ */}
         <div className="hidden md:flex items-center gap-8 text-white font-semibold">
 
@@ -33,7 +32,6 @@ export default function Navbar() {
             <span className="text-xl">⌂</span>
             <span>Anasayfa</span>
           </a>
-
 
           {/* MENÜ */}
           <a
@@ -51,7 +49,6 @@ export default function Navbar() {
             <span>Menü</span>
           </a>
 
-
           {/* GALERİ */}
           <a
             href="/#galeri"
@@ -67,7 +64,6 @@ export default function Navbar() {
 
             <span>Galeri</span>
           </a>
-
 
           {/* İLETİŞİM */}
           <a
@@ -87,15 +83,37 @@ export default function Navbar() {
 
         </div>
 
+        {/* SAĞ TARAF */}
+        <div className="hidden md:flex items-center gap-3">
 
-        {/* MASAÜSTÜ ARA */}
-        <a
-          href="tel:+905433450017"
-          className="hidden md:flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 transition px-7 py-3 rounded-full font-bold text-white shadow-lg shadow-cyan-500/20"
-        >
-          📞 Ara
-        </a>
+          {/* DİL SEÇİMİ */}
+          <div className="flex items-center bg-white/10 rounded-full border border-white/20 p-1">
+            <a
+              href="/"
+              className="px-3 py-2 rounded-full bg-cyan-500 text-white text-sm font-bold"
+              aria-label="Türkçe"
+            >
+              🇹🇷 TR
+            </a>
 
+            <a
+              href="/en"
+              className="px-3 py-2 rounded-full text-white text-sm font-bold hover:bg-white/10 transition"
+              aria-label="English"
+            >
+              🇬🇧 EN
+            </a>
+          </div>
+
+          {/* ARA */}
+          <a
+            href="tel:+905433450017"
+            className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 transition px-7 py-3 rounded-full font-bold text-white shadow-lg shadow-cyan-500/20"
+          >
+            📞 Ara
+          </a>
+
+        </div>
 
         {/* MOBİL BUTON */}
         <button
@@ -107,7 +125,6 @@ export default function Navbar() {
         </button>
 
       </div>
-
 
       {/* MOBİL MENÜ */}
       {menuOpen && (
@@ -162,6 +179,25 @@ export default function Navbar() {
               İletişim
             </a>
 
+            {/* MOBİL DİL SEÇİMİ */}
+            <div className="flex gap-2 pt-2 border-t border-white/10">
+              <a
+                href="/"
+                onClick={() => setMenuOpen(false)}
+                className="flex-1 bg-cyan-500 text-center py-3 rounded-full font-bold"
+              >
+                🇹🇷 Türkçe
+              </a>
+
+              <a
+                href="/en"
+                onClick={() => setMenuOpen(false)}
+                className="flex-1 bg-white/10 hover:bg-white/20 text-center py-3 rounded-full font-bold transition"
+              >
+                🇬🇧 English
+              </a>
+            </div>
+
             <a
               href="tel:+905433450017"
               className="bg-cyan-500 hover:bg-cyan-400 text-center py-3 rounded-full font-bold transition"
@@ -177,3 +213,4 @@ export default function Navbar() {
     </nav>
   );
 }
+```
