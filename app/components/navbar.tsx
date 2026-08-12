@@ -1,4 +1,3 @@
-```tsx
 "use client";
 
 import { useState } from "react";
@@ -45,7 +44,6 @@ export default function Navbar() {
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
               />
             </div>
-
             <span>Menü</span>
           </a>
 
@@ -61,7 +59,6 @@ export default function Navbar() {
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
               />
             </div>
-
             <span>Galeri</span>
           </a>
 
@@ -77,7 +74,6 @@ export default function Navbar() {
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
               />
             </div>
-
             <span>İletişim</span>
           </a>
 
@@ -198,6 +194,7 @@ export default function Navbar() {
               </a>
             </div>
 
+            {/* ARA */}
             <a
               href="tel:+905433450017"
               className="bg-cyan-500 hover:bg-cyan-400 text-center py-3 rounded-full font-bold transition"
@@ -213,4 +210,3 @@ export default function Navbar() {
     </nav>
   );
 }
-```
