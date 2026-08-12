@@ -6,6 +6,11 @@ export const metadata: Metadata = {
     "English menu of Balıkçı Halil Geyikli. Fresh fish, seafood, calamari, shrimp, fish sandwiches, grilled fish, Aegean meze and drinks in Geyikli, Çanakkale.",
   alternates: {
     canonical: "/en/menu",
+    languages: {
+      "tr-TR": "/menu",
+      "en-US": "/en/menu",
+      "x-default": "/menu",
+    },
   },
   robots: {
     index: true,
