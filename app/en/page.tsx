@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Balıkçı Halil Geyikli | Fish & Seafood Restaurant",
+  title: "English Menu | Fish, Seafood & Meze",
   description:
-    "Balıkçı Halil Geyikli is a fish and seafood restaurant in Geyikli, Çanakkale. Enjoy fresh fish, seafood, traditional Aegean meze and fish sandwiches.",
+    "English menu of Balıkçı Halil Geyikli. Fresh fish, seafood, fish sandwiches, grilled fish, Aegean meze and drinks in Geyikli, Çanakkale.",
   alternates: {
-    canonical: "/en",
+    canonical: "/en/menu",
     languages: {
-      "tr-TR": "/",
-      "en-US": "/en",
-      "x-default": "/",
+      "tr-TR": "/menu",
+      "en-US": "/en/menu",
+      "x-default": "/menu",
     },
   },
   robots: {
@@ -17,285 +17,189 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Balıkçı Halil Geyikli | Fish & Seafood Restaurant",
+    title: "Balıkçı Halil Geyikli | English Menu",
     description:
-      "Fresh fish, seafood and traditional Aegean meze in Geyikli, Çanakkale.",
-    url: "/en",
+      "Fresh fish, seafood, fish sandwiches, grilled fish and Aegean meze in Geyikli, Çanakkale.",
+    url: "/en/menu",
     siteName: "Balıkçı Halil Geyikli",
     locale: "en_US",
     type: "website",
   },
 };
 
-export default function EnglishHome() {
+const categories = [
+  {
+    title: "🍳 Pan Fried",
+    items: [
+      ["Sardines", "300₺"],
+      ["Horse Mackerel", "350₺"],
+      ["Whiting", "450₺"],
+      ["Sole", "400₺"],
+      ["Red Porgy", "450₺"],
+      ["Turkish Meatballs", "500₺"],
+      ["Pan Fried Mussels", "350₺"],
+    ],
+  },
+  {
+    title: "🦐 Hot Starters",
+    items: [
+      ["Calamari", "700₺"],
+      ["Fish Bone Crisps", "150₺"],
+      ["French Fries", "200₺"],
+    ],
+  },
+  {
+    title: "🥪 Fish Sandwich",
+    items: [
+      ["Sardine Sandwich", "200₺"],
+      ["Whiting Sandwich", "300₺"],
+      ["Sole Sandwich", "300₺"],
+    ],
+  },
+  {
+    title: "🥗 Salads",
+    items: [
+      ["Shepherd's Salad", "200–300₺"],
+    ],
+  },
+  {
+    title: "🔥 Grilled Fish",
+    items: [
+      ["Grilled Sardines", "350₺"],
+      ["Grilled Sea Bream", "500₺"],
+      ["Grilled Sea Bass", "600₺"],
+    ],
+  },
+  {
+    title: "🥗 Aegean Meze",
+    items: [
+      ["Octopus", "550₺"],
+      ["Shrimp", "500₺"],
+      ["Lakerda – Cured Bonito", "450₺"],
+      ["Marinated Sea Bass", "550₺"],
+      ["Marinated Anchovies", "200₺"],
+      ["Marinated Sardines", "300₺"],
+      ["Sea Fennel", "200₺"],
+      ["Yogurt Meze", "200₺"],
+    ],
+  },
+  {
+    title: "🥤 Drinks",
+    items: [
+      ["Soft Drinks", "70₺"],
+      ["Homemade Lemonade", "70₺"],
+      ["Turkish Turnip Juice", "65₺"],
+      ["Pickle Juice", "70₺"],
+      ["Water", "20₺"],
+      ["Mineral Water", "40₺"],
+      ["Bottled Soft Drink", "60₺"],
+    ],
+  },
+];
+
+export default function EnglishMenu() {
   return (
-    <main className="min-h-screen bg-[#071c2d] text-white">
+    <main className="min-h-screen bg-[#08253f] text-white">
 
-      {/* HEADER */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-[#061a2e]/95 backdrop-blur-md border-b border-cyan-400/30">
-        <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <header className="bg-[#061a2e] border-b border-cyan-400/30">
+        <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
 
-          <a href="/en" className="font-bold text-xl">
-            Balıkçı <span className="text-cyan-400">Halil</span>
+          <a
+            href="/en"
+            className="font-bold text-xl"
+          >
+            Balıkçı <span className="text-cyan-400">Halil</span> Geyikli
           </a>
 
-          <nav className="flex items-center gap-4 text-sm font-semibold">
+          <div className="flex items-center gap-3">
 
             <a
               href="/en"
-              className="text-cyan-300 hover:text-cyan-200 transition"
+              className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition"
             >
               Home
             </a>
 
             <a
-              href="/en/menu"
-              className="hover:text-cyan-300 transition"
-            >
-              Menu
-            </a>
-
-            <a
-              href="#location"
-              className="hover:text-cyan-300 transition"
-            >
-              Contact
-            </a>
-
-            <a
               href="/"
-              className="bg-white/10 hover:bg-white/20 px-3 py-2 rounded-full transition"
+              className="px-4 py-2 rounded-full bg-cyan-500 hover:bg-cyan-600 transition font-bold"
             >
               🇹🇷 TR
             </a>
 
-          </nav>
-
+          </div>
         </div>
       </header>
 
-      {/* HERO */}
-      <section
-        className="relative min-h-screen flex items-center justify-center text-center px-6"
-        style={{
-          backgroundImage: "url('/bahce.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section className="bg-[#08253f] py-24 text-white">
 
-        <div className="absolute inset-0 bg-black/65" />
+        <div className="max-w-6xl mx-auto px-6">
 
-        <div className="relative z-10 max-w-4xl mx-auto pt-20">
+          <div className="text-center mb-12">
 
-          <p className="text-yellow-300 tracking-[5px] text-sm md:text-base font-semibold">
-            SINCE 1999
-          </p>
-
-          <h1 className="text-5xl md:text-7xl font-extrabold mt-5 leading-tight">
-            Balıkçı <span className="text-cyan-400">Halil</span> Geyikli
-          </h1>
-
-          <h2 className="text-2xl md:text-4xl text-cyan-300 mt-4 font-semibold">
-            Fish & Seafood Restaurant
-          </h2>
-
-          <p className="text-gray-200 max-w-2xl mx-auto mt-6 text-lg leading-relaxed">
-            Fresh fish, seafood and traditional Aegean meze in Geyikli,
-            Çanakkale.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-
-            <a
-              href="/en/menu"
-              className="bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full font-bold text-lg transition shadow-lg"
-            >
-              View Our Menu
-            </a>
-
-            <a
-              href="tel:+905433450017"
-              className="border border-white/40 hover:bg-white/10 px-8 py-4 rounded-full font-bold text-lg transition"
-            >
-              Call Us
-            </a>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* INTRODUCTION */}
-      <section className="py-20 px-6 bg-[#071c2d]">
-
-        <div className="max-w-5xl mx-auto text-center">
-
-          <p className="text-cyan-400 font-semibold tracking-[4px] text-sm">
-            FRESH FROM THE SEA
-          </p>
-
-          <h2 className="text-3xl md:text-5xl font-bold mt-4">
-            A Taste of Geyikli
-          </h2>
-
-          <p className="text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed text-lg">
-            At Balıkçı Halil Geyikli, we serve daily fresh fish, seafood and
-            homemade Aegean meze. Enjoy a traditional Turkish fish dinner in
-            our relaxed garden atmosphere.
-          </p>
-
-        </div>
-      </section>
-
-      {/* SPECIALTIES */}
-      <section className="py-20 px-6 bg-[#061a2e]">
-
-        <h2 className="text-4xl md:text-5xl font-bold text-center">
-          Our Specialties
-        </h2>
-
-        <p className="text-center text-gray-400 mt-4 mb-12">
-          Fresh seafood and traditional Aegean flavors
-        </p>
-
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-
-          {/* SARDINES */}
-          <div className="overflow-hidden rounded-3xl shadow-2xl bg-[#0b2538]">
-
-            <img
-              src="/sardalye.jpg"
-              alt="Fresh sardines at Balıkçı Halil Geyikli"
-              className="w-full h-72 object-cover"
-            />
-
-            <div className="p-6">
-
-              <h3 className="text-2xl font-bold">
-                Fresh Sardines
-              </h3>
-
-              <p className="text-gray-400 mt-2">
-                Daily fresh sardines prepared with care.
-              </p>
-
-            </div>
-          </div>
-
-          {/* SHRIMP */}
-          <div className="overflow-hidden rounded-3xl shadow-2xl bg-[#0b2538]">
-
-            <img
-              src="/karides.jpg"
-              alt="Shrimp at Balıkçı Halil Geyikli"
-              className="w-full h-72 object-cover"
-            />
-
-            <div className="p-6">
-
-              <h3 className="text-2xl font-bold">
-                Shrimp
-              </h3>
-
-              <p className="text-gray-400 mt-2">
-                A fresh seafood favorite with an Aegean touch.
-              </p>
-
-            </div>
-          </div>
-
-          {/* LAKERDA */}
-          <div className="overflow-hidden rounded-3xl shadow-2xl bg-[#0b2538]">
-
-            <img
-              src="/lakerda.jpg"
-              alt="Traditional lakerda at Balıkçı Halil Geyikli"
-              className="w-full h-72 object-cover"
-            />
-
-            <div className="p-6">
-
-              <h3 className="text-2xl font-bold">
-                Lakerda
-              </h3>
-
-              <p className="text-gray-400 mt-2">
-                A traditional Turkish fish specialty.
-              </p>
-
-            </div>
-          </div>
-
-        </div>
-
-        <div className="text-center mt-12">
-
-          <a
-            href="/en/menu"
-            className="inline-block bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full font-bold transition"
-          >
-            View Full Menu
-          </a>
-
-        </div>
-
-      </section>
-
-      {/* LOCATION */}
-      <section
-        id="location"
-        className="py-20 px-6 bg-[#071c2d]"
-      >
-
-        <div className="max-w-5xl mx-auto text-center">
-
-          <p className="text-cyan-400 font-semibold tracking-[4px] text-sm">
-            VISIT US IN GEYİKLİ
-          </p>
-
-          <h2 className="text-3xl md:text-5xl font-bold mt-4">
-            Where to Find Us
-          </h2>
-
-          <p className="text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed text-lg">
-            Balıkçı Halil Geyikli is located in the center of Geyikli,
-            Çanakkale. We welcome both local guests and visitors exploring
-            the Geyikli and Bozcaada area.
-          </p>
-
-          <div className="mt-8 text-gray-300">
-
-            <p>
-              <strong className="text-white">Address:</strong>{" "}
-              Cumhuriyet, Vatan Sk. 5, 17610 Geyikli,
-              Ezine, Çanakkale, Türkiye
+            <p className="text-cyan-300 text-sm font-semibold tracking-[4px]">
+              BALIKÇI HALİL GEYİKLİ
             </p>
 
-            <p className="mt-3">
-              <strong className="text-white">Phone:</strong>{" "}
-              +90 543 345 00 17
+            <h1 className="text-5xl md:text-6xl font-bold mt-4">
+              English Menu
+            </h1>
+
+            <p className="text-center text-gray-300 text-lg mt-5 max-w-3xl mx-auto">
+              Fresh fish, seafood, fish sandwiches, grilled fish and
+              traditional Aegean meze in Geyikli, Çanakkale.
             </p>
 
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+          <div className="grid md:grid-cols-2 gap-8">
 
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Balikci+Halil+Geyikli"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full font-bold transition"
-            >
-              📍 Open in Google Maps
-            </a>
+            {categories.map((category) => (
+              <div
+                key={category.title}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+              >
 
-            <a
-              href="tel:+905433450017"
-              className="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-full font-bold transition"
-            >
-              📞 Call Us
-            </a>
+                <h2 className="text-2xl font-bold mb-6 text-cyan-300">
+                  {category.title}
+                </h2>
+
+                <div className="space-y-4">
+
+                  {category.items.map(([name, price]) => (
+                    <div
+                      key={name}
+                      className="flex items-center justify-between gap-4 border-b border-white/10 pb-3"
+                    >
+
+                      <span className="text-lg">
+                        {name}
+                      </span>
+
+                      <span className="text-lg font-bold text-white whitespace-nowrap">
+                        {price}
+                      </span>
+
+                    </div>
+                  ))}
+
+                </div>
+
+              </div>
+            ))}
+
+          </div>
+
+          <div className="text-center mt-12">
+
+            <p className="text-cyan-300 text-sm">
+              🌊 Fresh from the sea – Enjoy your meal! 🌊
+            </p>
+
+            <p className="text-gray-400 text-sm mt-4">
+              Prices may vary depending on the daily catch and seasonal
+              products.
+            </p>
 
           </div>
 
@@ -303,7 +207,6 @@ export default function EnglishHome() {
 
       </section>
 
-      {/* FOOTER */}
       <footer className="py-8 bg-[#061a2e] border-t border-white/10 text-center">
 
         <p className="text-gray-400">
