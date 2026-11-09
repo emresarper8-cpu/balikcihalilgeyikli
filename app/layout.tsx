@@ -90,8 +90,8 @@ const structuredData = {
         "Saturday",
         "Sunday",
       ],
-      opens: "09:00",
-      closes: "22:30",
+      opens: "12.00",
+      closes: "20.30",
     },
   ],
 };

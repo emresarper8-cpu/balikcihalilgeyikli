@@ -53,7 +53,7 @@ export default function Contact() {
                   <p className="text-white mt-1">
                     Every Day
                     <br />
-                    11:00 AM - 11:00 PM
+                    12:00 PM - 8:30 PM
                   </p>
                 </div>
               </div>
