@@ -1,15 +1,26 @@
+
 import type { Metadata } from "next";
 
+import EnglishNavbar from "./components/navbar";
+import About from "./components/about";
+import Gallery from "./components/gallery";
+import Reviews from "./components/reviews";
+import Contact from "./components/contact";
+import WhatsApp from "./components/whatsapp";
+import Footer from "./components/footer";
+import Stats from "./components/stats";
+import CTA from "./components/cta";
+
 export const metadata: Metadata = {
-  title: "English Menu | Fish, Seafood & Meze",
+  title: "Balıkçı Halil Geyikli | Fish Restaurant in Geyikli",
   description:
-    "English menu of Balıkçı Halil Geyikli. Fresh fish, seafood, fish sandwiches, grilled fish, Aegean meze and drinks in Geyikli, Çanakkale.",
+    "Discover fresh fish, seafood and traditional Aegean meze at Balıkçı Halil in Geyikli, Çanakkale. A family tradition since 1999.",
   alternates: {
-    canonical: "/en/menu",
+    canonical: "/en",
     languages: {
-      "tr-TR": "/menu",
-      "en-US": "/en/menu",
-      "x-default": "/menu",
+      "tr-TR": "/",
+      "en-US": "/en",
+      "x-default": "/",
     },
   },
   robots: {
@@ -17,207 +28,185 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Balıkçı Halil Geyikli | English Menu",
+    title: "Balıkçı Halil Geyikli | Fish Restaurant",
     description:
-      "Fresh fish, seafood, fish sandwiches, grilled fish and Aegean meze in Geyikli, Çanakkale.",
-    url: "/en/menu",
+      "Fresh fish, seafood and Aegean meze in Geyikli, Çanakkale. Since 1999.",
+    url: "/en",
     siteName: "Balıkçı Halil Geyikli",
     locale: "en_US",
     type: "website",
   },
 };
 
-const categories = [
+const featuredDishes = [
   {
-    title: "🍳 Pan Fried",
-    items: [
-      ["Sardines", "300₺"],
-      ["Horse Mackerel", "350₺"],
-      ["Whiting", "450₺"],
-      ["Sole", "400₺"],
-      ["Red Porgy", "450₺"],
-      ["Turkish Meatballs", "500₺"],
-      ["Pan Fried Mussels", "350₺"],
-    ],
+    name: "Sardines",
+    image: "/sardalye.jpg",
+    description: "Fresh sardines prepared with care.",
   },
   {
-    title: "🦐 Hot Starters",
-    items: [
-      ["Calamari", "700₺"],
-      ["Fish Bone Crisps", "150₺"],
-      ["French Fries", "200₺"],
-    ],
+    name: "Shrimp",
+    image: "/karides.jpg",
+    description: "Delicious seafood from the Aegean.",
   },
   {
-    title: "🥪 Fish Sandwich",
-    items: [
-      ["Sardine Sandwich", "200₺"],
-      ["Whiting Sandwich", "300₺"],
-      ["Sole Sandwich", "300₺"],
-    ],
-  },
-  {
-    title: "🥗 Salads",
-    items: [
-      ["Shepherd's Salad", "200–300₺"],
-    ],
-  },
-  {
-    title: "🔥 Grilled Fish",
-    items: [
-      ["Grilled Sardines", "350₺"],
-      ["Grilled Sea Bream", "500₺"],
-      ["Grilled Sea Bass", "600₺"],
-    ],
-  },
-  {
-    title: "🥗 Aegean Meze",
-    items: [
-      ["Octopus", "550₺"],
-      ["Shrimp", "500₺"],
-      ["Lakerda – Cured Bonito", "450₺"],
-      ["Marinated Sea Bass", "550₺"],
-      ["Marinated Anchovies", "200₺"],
-      ["Marinated Sardines", "300₺"],
-      ["Sea Fennel", "200₺"],
-      ["Yogurt Meze", "200₺"],
-    ],
-  },
-  {
-    title: "🥤 Drinks",
-    items: [
-      ["Soft Drinks", "70₺"],
-      ["Homemade Lemonade", "70₺"],
-      ["Turkish Turnip Juice", "65₺"],
-      ["Pickle Juice", "70₺"],
-      ["Water", "20₺"],
-      ["Mineral Water", "40₺"],
-      ["Bottled Soft Drink", "60₺"],
-    ],
+    name: "Lakerda",
+    image: "/lakerda.jpg",
+    description: "A traditional cured bonito speciality.",
   },
 ];
 
-export default function EnglishMenu() {
+export default function EnglishHomePage() {
   return (
-    <main className="min-h-screen bg-[#08253f] text-white">
+    <main className="bg-[#071826] text-white">
 
-      <header className="bg-[#061a2e] border-b border-cyan-400/30">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <EnglishNavbar />
 
-          <a
-            href="/en"
-            className="font-bold text-xl"
-          >
-            Balıkçı <span className="text-cyan-400">Halil</span> Geyikli
-          </a>
+      {/* HERO */}
+      <section
+        className="relative min-h-[90vh] flex items-center justify-center text-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/bahce.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-[#04192d]/70" />
 
-          <div className="flex items-center gap-3">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-24">
+
+          <p className="text-cyan-300 tracking-[6px] font-semibold text-sm">
+            SINCE 1999
+          </p>
+
+          <h1 className="text-5xl md:text-7xl font-bold mt-6">
+            Balıkçı Halil Geyikli
+          </h1>
+
+          <p className="text-2xl md:text-3xl text-gray-200 mt-5">
+            Fish & Seafood Restaurant
+          </p>
+
+          <p className="text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
+            Fresh fish, delicious Aegean meze and a warm atmosphere
+            in the heart of Geyikli.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
 
             <a
-              href="/en"
-              className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition"
+              href="/en/menu"
+              className="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-full font-bold"
             >
-              Home
+              🍽️ View Our Menu
             </a>
 
             <a
-              href="/"
-              className="px-4 py-2 rounded-full bg-cyan-500 hover:bg-cyan-600 transition font-bold"
+              href="#gallery"
+              className="border border-white hover:bg-white hover:text-[#071826] transition px-8 py-4 rounded-full font-bold"
             >
-              🇹🇷 TR
+              📸 View Gallery
             </a>
 
           </div>
+
+          <p className="mt-16 text-gray-300">
+            ↓ Discover
+          </p>
+
         </div>
-      </header>
+      </section>
 
-      <section className="bg-[#08253f] py-24 text-white">
+      {/* FEATURED DISHES */}
+      <section className="bg-[#08253f] py-24">
+        <div className="max-w-7xl mx-auto px-6">
 
-        <div className="max-w-6xl mx-auto px-6">
-
-          <div className="text-center mb-12">
-
-            <p className="text-cyan-300 text-sm font-semibold tracking-[4px]">
-              BALIKÇI HALİL GEYİKLİ
+          <div className="text-center mb-14">
+            <p className="text-cyan-400 tracking-[4px] text-sm font-semibold">
+              FROM THE AEGEAN SEA
             </p>
 
-            <h1 className="text-5xl md:text-6xl font-bold mt-4">
-              English Menu
-            </h1>
-
-            <p className="text-center text-gray-300 text-lg mt-5 max-w-3xl mx-auto">
-              Fresh fish, seafood, fish sandwiches, grilled fish and
-              traditional Aegean meze in Geyikli, Çanakkale.
-            </p>
-
+            <h2 className="text-4xl md:text-5xl font-bold mt-4">
+              Fresh Fish & Seafood in Geyikli
+            </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
 
-            {categories.map((category) => (
+            {featuredDishes.map((dish) => (
               <div
-                key={category.title}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                key={dish.name}
+                className="bg-[#10304f] rounded-3xl overflow-hidden shadow-xl"
               >
+                <img
+                  src={dish.image}
+                  alt={dish.name}
+                  className="w-full h-72 object-cover"
+                />
 
-                <h2 className="text-2xl font-bold mb-6 text-cyan-300">
-                  {category.title}
-                </h2>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-white">
+                    {dish.name}
+                  </h3>
 
-                <div className="space-y-4">
-
-                  {category.items.map(([name, price]) => (
-                    <div
-                      key={name}
-                      className="flex items-center justify-between gap-4 border-b border-white/10 pb-3"
-                    >
-
-                      <span className="text-lg">
-                        {name}
-                      </span>
-
-                      <span className="text-lg font-bold text-white whitespace-nowrap">
-                        {price}
-                      </span>
-
-                    </div>
-                  ))}
-
+                  <p className="text-gray-400 mt-3">
+                    {dish.description}
+                  </p>
                 </div>
-
               </div>
             ))}
 
           </div>
 
           <div className="text-center mt-12">
-
-            <p className="text-cyan-300 text-sm">
-              🌊 Fresh from the sea – Enjoy your meal! 🌊
-            </p>
-
-            <p className="text-gray-400 text-sm mt-4">
-              Prices may vary depending on the daily catch and seasonal
-              products.
-            </p>
-
+            <a
+              href="/en/menu"
+              className="inline-block bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-full font-bold"
+            >
+              Explore Our Menu →
+            </a>
           </div>
 
         </div>
-
       </section>
 
-      <footer className="py-8 bg-[#061a2e] border-t border-white/10 text-center">
+      {/* INTRODUCTION */}
+      <section className="bg-[#071826] py-24">
+        <div className="max-w-5xl mx-auto px-6 text-center">
 
-        <p className="text-gray-400">
-          © {new Date().getFullYear()} Balıkçı Halil Geyikli
-        </p>
+          <p className="text-cyan-400 tracking-[4px] text-sm font-semibold">
+            FISH RESTAURANT IN GEYİKLİ
+          </p>
 
-        <p className="text-gray-500 text-sm mt-2">
-          Fish & Seafood Restaurant in Geyikli, Çanakkale
-        </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
+            From the Sea to Your Table
+          </h2>
 
-      </footer>
+          <p className="text-gray-300 leading-8 text-lg mt-8">
+            Enjoy fresh fish, seafood and traditional Aegean meze
+            at Balıkçı Halil. With our peaceful garden and welcoming
+            atmosphere, we invite you to share a memorable meal
+            with your loved ones.
+          </p>
+
+          <a
+            href="/en/explore"
+            className="inline-block mt-8 text-cyan-400 hover:text-cyan-300 font-semibold transition"
+          >
+            Discover Geyikli and Its Surroundings →
+          </a>
+
+        </div>
+      </section>
+
+      <Stats />
+      <About />
+      <Gallery />
+      <Reviews />
+      <CTA />
+
+      <div id="contact">
+        <Contact />
+      </div>
+
+      <WhatsApp />
+      <Footer />
 
     </main>
   );
