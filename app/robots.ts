@@ -1,3 +1,4 @@
+
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
@@ -6,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://balikcihalilgeyikli-mby9.vercel.app/sitemap.xml",
+    sitemap: "https://balikcihalilgeyikli.com/sitemap.xml",
   };
 }

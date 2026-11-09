@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -60,6 +61,17 @@ export default function Navbar() {
               />
             </div>
             <span>Galeri</span>
+          </a>
+
+          {/* KEŞFET */}
+          <a
+            href="/kesfet"
+            className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
+          >
+            <span className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-white/30 group-hover:border-cyan-400 transition shadow-md text-2xl">
+              🌊
+            </span>
+            <span>Keşfet</span>
           </a>
 
           {/* İLETİŞİM */}
@@ -160,6 +172,18 @@ export default function Navbar() {
                 className="w-10 h-10 rounded-full object-cover"
               />
               Galeri
+            </a>
+
+            {/* MOBİL KEŞFET */}
+            <a
+              href="/kesfet"
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center gap-3 hover:text-cyan-300 transition"
+            >
+              <span className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 text-xl">
+                🌊
+              </span>
+              Geyikli'yi Keşfet
             </a>
 
             <a
