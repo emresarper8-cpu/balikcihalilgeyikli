@@ -61,16 +61,6 @@ export default function EnglishNavbar() {
           </a>
 
           <a
-            href="/en/explore"
-            className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
-          >
-            <span className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-white/30 group-hover:border-cyan-400 transition shadow-md text-2xl">
-              🌊
-            </span>
-            <span>Discover</span>
-          </a>
-
-          <a
             href="/en#contact"
             className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
           >
@@ -83,6 +73,7 @@ export default function EnglishNavbar() {
             </div>
             <span>Contact</span>
           </a>
+
         </div>
 
         {/* RIGHT SIDE */}
@@ -107,12 +98,14 @@ export default function EnglishNavbar() {
             </a>
           </div>
 
+          {/* CALL */}
           <a
             href="tel:+905433450017"
             className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 transition px-7 py-3 rounded-full font-bold text-white shadow-lg shadow-cyan-500/20"
           >
             📞 Call
           </a>
+
         </div>
 
         {/* MOBILE BUTTON */}
@@ -123,6 +116,7 @@ export default function EnglishNavbar() {
         >
           ☰
         </button>
+
       </div>
 
       {/* MOBILE MENU */}
@@ -165,17 +159,6 @@ export default function EnglishNavbar() {
             </a>
 
             <a
-              href="/en/explore"
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 hover:text-cyan-300 transition"
-            >
-              <span className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 text-xl">
-                🌊
-              </span>
-              Discover Geyikli
-            </a>
-
-            <a
               href="/en#contact"
               onClick={() => setMenuOpen(false)}
               className="flex items-center gap-3 hover:text-cyan-300 transition"
@@ -207,12 +190,14 @@ export default function EnglishNavbar() {
               </a>
             </div>
 
+            {/* CALL */}
             <a
               href="tel:+905433450017"
               className="bg-cyan-500 hover:bg-cyan-400 text-center py-3 rounded-full font-bold transition"
             >
               📞 Call
             </a>
+
           </div>
         </div>
       )}
