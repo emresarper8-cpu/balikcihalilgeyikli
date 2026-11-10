@@ -106,10 +106,6 @@ export default function EnglishHomePage() {
 
           </div>
 
-          <p className="mt-16 text-gray-300">
-            ↓ Discover
-          </p>
-
         </div>
       </section>
 
@@ -189,18 +185,93 @@ export default function EnglishHomePage() {
             href="/en/explore"
             className="inline-block mt-8 text-cyan-400 hover:text-cyan-300 font-semibold transition"
           >
-            Discover Geyikli and Its Surroundings →
+            Explore Geyikli & Its Surroundings →
           </a>
 
         </div>
       </section>
 
+      {/* GEYIKLI & SURROUNDINGS GUIDE */}
+      <section className="bg-[#0b2538] py-24 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+
+          <p className="text-cyan-400 tracking-[4px] text-sm font-semibold">
+            DISCOVER THE AEGEAN
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
+            Geyikli & Surroundings Guide
+          </h2>
+
+          <p className="text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed">
+            Discover the history, natural beauty and hidden gems
+            of Geyikli and its surroundings. Explore historic
+            landmarks, old photographs, coastal villages and
+            beautiful places worth visiting.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+
+            <div className="bg-[#10304f] rounded-2xl p-8">
+              <div className="text-4xl">🏛️</div>
+              <h3 className="text-xl font-bold mt-4">
+                Historical Places
+              </h3>
+              <p className="text-gray-400 mt-3">
+                Discover the history and cultural heritage of the region.
+              </p>
+            </div>
+
+            <div className="bg-[#10304f] rounded-2xl p-8">
+              <div className="text-4xl">📷</div>
+              <h3 className="text-xl font-bold mt-4">
+                Old Photographs
+              </h3>
+              <p className="text-gray-400 mt-3">
+                Take a look at Geyikli and its surroundings through the years.
+              </p>
+            </div>
+
+            <div className="bg-[#10304f] rounded-2xl p-8">
+              <div className="text-4xl">📍</div>
+              <h3 className="text-xl font-bold mt-4">
+                Places to Visit
+              </h3>
+              <p className="text-gray-400 mt-3">
+                Find beautiful coastal spots and places to explore.
+              </p>
+            </div>
+
+          </div>
+
+          <a
+            href="/en/explore"
+            className="inline-block mt-12 bg-cyan-500 hover:bg-cyan-600 transition px-9 py-4 rounded-full font-bold shadow-lg"
+          >
+            Explore the Guide →
+          </a>
+
+        </div>
+      </section>
+
+      {/* STATS */}
       <Stats />
+
+      {/* ABOUT */}
       <About />
-      <Gallery />
+
+      {/* GALLERY */}
+      <div id="gallery">
+        <Gallery />
+      </div>
+
+      {/* REVIEWS */}
       <Reviews />
+
+      {/* CTA */}
       <CTA />
 
+      {/* CONTACT */}
       <div id="contact">
         <Contact />
       </div>
