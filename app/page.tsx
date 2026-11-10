@@ -1,3 +1,4 @@
+
 import Navbar from "./components/navbar";
 import About from "./components/about";
 import Gallery from "./components/gallery";
@@ -11,7 +12,6 @@ import CTA from "./components/cta";
 export default function Home() {
   return (
     <main>
-      {/* NAVBAR */}
       <Navbar />
 
       {/* HERO */}
@@ -53,10 +53,6 @@ export default function Home() {
               📸 Galeriyi Gör
             </a>
           </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-sm">
-          ↓ Keşfet
         </div>
       </section>
 
@@ -152,6 +148,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* GEYİKLİ REHBERİ */}
+      <section className="py-24 px-6 bg-[#0b2538]">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-cyan-400 font-semibold tracking-[4px] text-sm">
+            BU TOPRAKLARIN HİKÂYESİ
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
+            Geyikli Rehberi
+          </h2>
+
+          <p className="text-gray-300 max-w-2xl mx-auto mt-6 leading-relaxed">
+            Geyikli'nin tarihi sokaklarını, Odunluk İskelesi'nin geçmişini,
+            Dalyan'ın güzelliklerini ve bu güzel coğrafyanın hikâyelerini
+            birlikte tanıyalım.
+          </p>
+
+          <a
+            href="/kesfet"
+            className="inline-block mt-10 bg-cyan-500 hover:bg-cyan-600 text-white px-9 py-4 rounded-full font-bold transition shadow-lg"
+          >
+            Geyikli Rehberi'ni İncele →
+          </a>
+        </div>
+      </section>
+
       {/* İSTATİSTİK */}
       <Stats />
 
@@ -174,10 +196,7 @@ export default function Home() {
         <Contact />
       </div>
 
-      {/* WHATSAPP */}
       <WhatsApp />
-
-      {/* FOOTER */}
       <Footer />
     </main>
   );

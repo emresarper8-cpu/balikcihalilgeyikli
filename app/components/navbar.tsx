@@ -24,7 +24,6 @@ export default function Navbar() {
         {/* MASAÜSTÜ MENÜ */}
         <div className="hidden md:flex items-center gap-8 text-white font-semibold">
 
-          {/* ANASAYFA */}
           <a
             href="/"
             className="group flex flex-col items-center gap-1 text-cyan-300 hover:text-cyan-200 transition"
@@ -33,7 +32,6 @@ export default function Navbar() {
             <span>Anasayfa</span>
           </a>
 
-          {/* MENÜ */}
           <a
             href="/menu"
             className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
@@ -48,7 +46,6 @@ export default function Navbar() {
             <span>Menü</span>
           </a>
 
-          {/* GALERİ */}
           <a
             href="/#galeri"
             className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
@@ -63,18 +60,6 @@ export default function Navbar() {
             <span>Galeri</span>
           </a>
 
-          {/* KEŞFET */}
-          <a
-            href="/kesfet"
-            className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
-          >
-            <span className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-white/30 group-hover:border-cyan-400 transition shadow-md text-2xl">
-              🌊
-            </span>
-            <span>Keşfet</span>
-          </a>
-
-          {/* İLETİŞİM */}
           <a
             href="/#iletisim"
             className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
@@ -137,7 +122,6 @@ export default function Navbar() {
       {/* MOBİL MENÜ */}
       {menuOpen && (
         <div className="md:hidden bg-[#061a2e] border-t border-cyan-400/20 px-6 py-5">
-
           <div className="flex flex-col gap-4 text-white font-semibold">
 
             <a
@@ -172,18 +156,6 @@ export default function Navbar() {
                 className="w-10 h-10 rounded-full object-cover"
               />
               Galeri
-            </a>
-
-            {/* MOBİL KEŞFET */}
-            <a
-              href="/kesfet"
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 hover:text-cyan-300 transition"
-            >
-              <span className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 text-xl">
-                🌊
-              </span>
-              Geyikli'yi Keşfet
             </a>
 
             <a
@@ -227,10 +199,8 @@ export default function Navbar() {
             </a>
 
           </div>
-
         </div>
       )}
-
     </nav>
   );
 }
