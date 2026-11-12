@@ -23,7 +23,7 @@ const categories: {
         portion: "250 g, kılçıksız",
         calories: "600–800 kcal",
         allergens: ["Balık", "Gluten", "Yumurta"],
-        image: "/sardalye.jpg",
+        image: "/menu/sardalye.jpg.png",
       },
       {
         name: "İstavrit",
@@ -31,7 +31,6 @@ const categories: {
         portion: "400 g, çiğ, kılçıklı, unlu",
         calories: "500–700 kcal",
         allergens: ["Balık", "Gluten"],
-        image: "/balik.jpg",
       },
       {
         name: "Mezgit",
@@ -46,6 +45,7 @@ const categories: {
         portion: "200 g, kılçıksız, özel soslu",
         calories: "350–500 kcal",
         allergens: ["Balık", "Gluten", "Yumurta"],
+        image: "/menu/dil.jpg.png",
       },
       {
         name: "Mercan",
@@ -60,6 +60,7 @@ const categories: {
         portion: "350–400 g, çiğ, temizlenmemiş, kılçıklı, unlu",
         calories: "500–700 kcal",
         allergens: ["Balık", "Gluten"],
+        image: "/menu/hamsi.jpg.png",
       },
       {
         name: "Palamut",
@@ -81,6 +82,7 @@ const categories: {
         portion: "5 şiş, toplam 15 adet",
         calories: "Yaklaşık 525 kcal",
         allergens: ["Yumuşakçalar", "Gluten", "Yumurta"],
+        image: "/menu/midye-tava.jpg.png",
       },
     ],
   },
@@ -93,12 +95,14 @@ const categories: {
         portion: "200 g, özel marine, unlu kızartma",
         calories: "Tahmini hesaplanacak",
         allergens: ["Yumuşakçalar", "Gluten"],
+        image: "/menu/kalamar.jpg.png",
       },
       {
         name: "Patates Cips",
         price: "200₺",
         portion: "2 orta boy patates",
         calories: "Tahmini hesaplanacak",
+        image: "/menu/patates.jpg.png",
       },
     ],
   },
@@ -110,6 +114,7 @@ const categories: {
         price: "200₺",
         portion: "11–12 adet, yarım somun, roka ve soğan",
         allergens: ["Balık", "Gluten", "Yumurta"],
+        image: "/menu/sardalya-ekmek.jpg.png",
       },
       {
         name: "Mezgit",
@@ -132,6 +137,7 @@ const categories: {
         name: "Çoban Salatası",
         price: "200–300₺",
         portion: "Yaklaşık 100 g, zeytinyağlı",
+        image: "/menu/salata.jpg.png",
       },
       {
         name: "Yeşil Salata",
@@ -148,14 +154,14 @@ const categories: {
         price: "350₺",
         portion: "350–400 g, bütün, yağ eklenmeden",
         allergens: ["Balık"],
-        image: "/sardalye.jpg",
+        image: "/menu/izgara-sardalya.jpg.png",
       },
       {
         name: "Çipura",
         price: "500₺",
         portion: "400–450 g, bütün, yağ eklenmeden",
         allergens: ["Balık"],
-        image: "/cipura.jpg",
+        image: "/menu/çipura.jpg.png",
       },
       {
         name: "Levrek",
@@ -168,6 +174,7 @@ const categories: {
         price: "400₺",
         portion: "Günlük değişken, bütün, yağ eklenmeden",
         allergens: ["Balık"],
+        image: "/menu/palamut.jpg.png",
       },
     ],
   },
@@ -179,50 +186,55 @@ const categories: {
         price: "550₺",
         portion: "Yaklaşık 100 g",
         allergens: ["Yumuşakçalar"],
-        image: "/ahtapot.jpg",
+        image: "/menu/ahtapot-marin.jpg.png",
       },
       {
         name: "Karides",
         price: "500₺",
         portion: "Yaklaşık 100 g",
         allergens: ["Kabuklular"],
-        image: "/karides.jpg",
+        image: "/menu/karides.jpg.png",
       },
       {
         name: "Lakerda",
         price: "450₺",
         portion: "Yaklaşık 100 g",
         allergens: ["Balık"],
-        image: "/lakerda.jpg",
+        image: "/menu/lakerda.jpg.png",
       },
       {
         name: "Levrek Marin",
         price: "550₺",
         portion: "Yaklaşık 100 g",
         allergens: ["Balık"],
+        image: "/menu/levrek-marin.jpg.png",
       },
       {
         name: "Hamsi Marin",
         price: "200₺",
         portion: "Yaklaşık 100 g",
         allergens: ["Balık"],
+        image: "/menu/hamsi-marin.jpg.png",
       },
       {
         name: "Sardalya Marin",
         price: "300₺",
         portion: "Yaklaşık 100 g",
         allergens: ["Balık"],
+        image: "/menu/sardalye-marin.jpg.png",
       },
       {
         name: "Deniz Börülcesi",
         price: "200₺",
         portion: "Yaklaşık 100 g",
+        image: "/menu/deniz-borulcesi.jpg.png",
       },
       {
         name: "Yoğurtlu",
         price: "200₺",
         portion: "Yaklaşık 100 g",
         allergens: ["Süt"],
+        image: "/menu/yogurtlu.jpg.png",
       },
     ],
   },
@@ -230,46 +242,53 @@ const categories: {
     title: "🥤 İçecekler",
     items: [
       {
-        name: "Meşrubatlar",
+        name: "Kutu Meşrubatlar",
         price: "70₺",
         portion: "330 ml kutu",
         calories: "Yaklaşık 140 kcal",
+        image: "/menu/kutu-meşrubatlar.jpg.png",
       },
       {
         name: "Limonata",
         price: "70₺",
         portion: "330 ml",
         calories: "Yaklaşık 130–160 kcal",
+        image: "/menu/limonata.jpg.png",
       },
       {
         name: "Şalgam Suyu",
         price: "65₺",
-        portion: "300 ml",
+        portion: "300 ml · Acılı veya tatlı",
         calories: "Yaklaşık 20–30 kcal",
+        image: "/menu/şalgam-suyu.jpg.png",
       },
       {
         name: "Turşu Suyu",
         price: "70₺",
-        portion: "250 ml",
+        portion: "330 ml",
         calories: "Yaklaşık 5–15 kcal",
+        image: "/menu/tur%C5%9Fu%20suyu.jpg.png",
       },
       {
         name: "Su",
         price: "20₺",
         portion: "500 ml",
         calories: "0 kcal",
+        image: "/menu/su.jpg.png",
       },
       {
         name: "Soda",
         price: "40₺",
         portion: "200 ml",
         calories: "0 kcal",
+        image: "/menu/soda.jpg.png",
       },
       {
         name: "Şişe Meşrubat",
         price: "60₺",
         portion: "250 ml",
         calories: "Yaklaşık 105 kcal",
+        image: "/menu/%C5%9Fi%C5%9Fe-me%C5%9Frubat.jpg.png",
       },
     ],
   },
@@ -304,14 +323,20 @@ export default function FullMenu() {
                     key={`${category.title}-${item.name}-${index}`}
                     className="flex gap-3 sm:gap-5 bg-white rounded-xl p-2 sm:p-3 border border-cyan-100/30 shadow-lg hover:shadow-xl transition-all"
                   >
-                    <div className="relative w-24 h-24 sm:w-36 sm:h-32 shrink-0 overflow-hidden rounded-lg bg-[#eaf2f7]">
+                    <div className="relative w-24 h-24 sm:w-36 sm:h-32 shrink-0 overflow-hidden rounded-lg bg-white">
                       {item.image ? (
                         <Image
                           src={item.image}
                           alt={item.name}
                           fill
+                          loading={
+                            category.title === "🍳 Tava" &&
+                            item.name === "Sardalya"
+                              ? "eager"
+                              : "lazy"
+                          }
                           sizes="(max-width: 640px) 96px, 144px"
-                          className="object-cover"
+                          className="object-contain p-1"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-[#08253f] text-xs font-semibold text-center p-2">
@@ -332,11 +357,9 @@ export default function FullMenu() {
                           </p>
                         )}
                       </div>
-
-                      <div className="border-t border-[#dce6ed] pt-2 flex items-center justify-between gap-2">
-                        <span className="text-xs sm:text-sm text-gray-500">
-                          Balıkçı Halil
-                        </span>
+<div className="border-t border-[#dce6ed] pt-2 flex items-center justify-end">
+                      
+                     
 
                         <span className="text-lg sm:text-xl font-bold text-[#08253f] whitespace-nowrap">
                           {item.price}

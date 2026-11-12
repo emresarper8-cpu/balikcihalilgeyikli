@@ -73,10 +73,10 @@ const places = [
   {
     number: "06",
     category: "NATURAL BEAUTY",
-    title: "Heart Lake",
+    title: "kalpli gol",
     location: "Dalyan · Ezine",
     description:
-      "Known for its distinctive shape and changing colours, Heart Lake offers a remarkable natural landscape near Geyikli.",
+      "Known for its distinctive shape and changing colours, kalpli gol offers a remarkable natural landscape near Geyikli.",
     href: "/en/explore/kalpli-gol",
   },
   {
