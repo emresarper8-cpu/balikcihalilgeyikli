@@ -3,9 +3,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "English Menu | Fish, Seafood & Meze",
+  title: "English Menu | Balıkçı Halil Geyikli",
   description:
-    "English menu of Balıkçı Halil Geyikli. Fresh fish, seafood, fish sandwiches, grilled fish, Aegean meze and drinks in Geyikli, Çanakkale.",
+    "Fresh fish, seafood, grilled fish and Aegean meze in Geyikli, Çanakkale.",
   alternates: {
     canonical: "/en/menu",
     languages: {
@@ -13,19 +13,6 @@ export const metadata: Metadata = {
       "en-US": "/en/menu",
       "x-default": "/menu",
     },
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    title: "Balıkçı Halil Geyikli | English Menu",
-    description:
-      "Fresh fish, seafood, fish sandwiches, grilled fish and Aegean meze in Geyikli, Çanakkale.",
-    url: "/en/menu",
-    siteName: "Balıkçı Halil Geyikli",
-    locale: "en_US",
-    type: "website",
   },
 };
 
@@ -37,301 +24,340 @@ type MenuItem = {
   calories?: string;
   allergens?: string[];
   image?: string;
+  desc: string;
 };
 
-const categories: {
-  title: string;
-  items: MenuItem[];
-}[] = [
+const categories: { title: string; items: MenuItem[] }[] = [
   {
-    title: "🍳 Pan Fried (Tava)",
+    title: "🍳 Pan Fried Fish",
     items: [
       {
         name: "Sardines",
-        turkish: "sardalya",
+        turkish: "Sardalya",
         price: "300₺",
         portion: "250 g, boneless",
         calories: "600–800 kcal",
-        allergens: ["Fish", "Gluten (wheat)", "Egg"],
-        image: "/sardalye.jpg",
+        allergens: ["Fish", "Gluten", "Egg"],
+        image: "/menu/sardalye.jpg.png",
+        desc: "Aegean's traditional fish delicacy",
       },
       {
         name: "Horse Mackerel",
-        turkish: "istavrit",
+        turkish: "İstavrit",
         price: "350₺",
-        portion: "400 g, raw, with bones, flour-coated",
-        calories: "500–700 kcal",
-        allergens: ["Fish", "Gluten (wheat)"],
-        image: "/balik.jpg",
+        portion: "400 g, with bones",
+        allergens: ["Fish", "Gluten"],
+        desc: "Freshly prepared and pan-fried",
       },
       {
         name: "Whiting",
-        turkish: "mezgit",
+        turkish: "Mezgit",
         price: "450₺",
-        portion: "200 g, boneless, with special sauce",
-        calories: "350–500 kcal",
-        allergens: ["Fish", "Gluten (wheat)", "Egg"],
+        portion: "200 g, boneless",
+        allergens: ["Fish", "Gluten", "Egg"],
+        desc: "Crispy golden fried whiting",
       },
       {
         name: "Sole",
-        turkish: "dil balığı",
+        turkish: "Dil balığı",
         price: "400₺",
-        portion: "200 g, boneless, with special sauce",
-        calories: "350–500 kcal",
-        allergens: ["Fish", "Gluten (wheat)", "Egg"],
+        portion: "200 g",
+        allergens: ["Fish", "Gluten", "Egg"],
+        image: "/menu/dil.jpg.png",
+        desc: "Delicately prepared fried sole",
       },
       {
         name: "Red Porgy",
-        turkish: "mercan",
+        turkish: "Mercan",
         price: "450₺",
-        portion: "400 g, raw, with bones, flour-coated",
-        calories: "450–650 kcal",
-        allergens: ["Fish", "Gluten (wheat)"],
+        portion: "400 g, with bones",
+        allergens: ["Fish", "Gluten"],
+        desc: "Fresh seasonal fish",
       },
       {
         name: "Anchovies",
-        turkish: "hamsi",
+        turkish: "Hamsi",
         price: "350₺",
-        portion: "350–400 g,  with bones, flour-coated",
-        calories: "500–700 kcal",
-        allergens: ["Fish", "Gluten (wheat)"],
+        portion: "350–400 g",
+        allergens: ["Fish", "Gluten"],
+        image: "/menu/hamsi.jpg.png",
+        desc: "Traditional crispy fried anchovies",
       },
       {
         name: "Bonito",
-        turkish: "palamut",
+        turkish: "Palamut",
         price: "300₺",
-        portion: "250 g, with bones, flour-coated",
-        calories: "400–550 kcal",
-        allergens: ["Fish", "Gluten (wheat)"],
+        portion: "250 g",
+        allergens: ["Fish", "Gluten"],
+        image: "/menu/palamut.jpg.png",
+        desc: "Freshly prepared bonito",
       },
       {
         name: "Turkish Meatballs",
-        turkish: "köfte",
+        turkish: "Köfte",
         price: "500₺",
-        portion: "200 g raw weight, pan-cooked without added oil",
-        calories: "Approx. 450 kcal",
+        portion: "200 g raw weight",
         allergens: ["Gluten"],
+        desc: "Traditional Turkish-style meatballs",
       },
       {
         name: "Fried Mussels",
-        turkish: "midye tava",
+        turkish: "Midye Tava",
         price: "350₺",
-        portion: "15 pieces, served on 5 skewers",
-        calories: "Approx. 525 kcal",
-        allergens: ["Molluscs", "Gluten (wheat)", "Egg"],
+        portion: "15 pieces",
+        allergens: ["Molluscs", "Gluten", "Egg"],
+        image: "/menu/midye-tava.jpg.png",
+        desc: "Golden fried mussels",
       },
     ],
   },
   {
-    title: "🦐 Hot Starters (Ara Sıcak)",
+    title: "🦐 Hot Starters",
     items: [
       {
         name: "Calamari",
-        turkish: "kalamar",
+        turkish: "Kalamar",
         price: "700₺",
-        portion: "200 g, specially marinated, flour-coated and fried",
-        allergens: ["Molluscs", "Gluten (wheat)"],
+        portion: "200 g",
+        allergens: ["Molluscs", "Gluten"],
+        image: "/menu/kalamar.jpg.png",
+        desc: "Served with homemade special tarator sauce",
       },
       {
         name: "French Fries",
-        turkish: "patates cips",
+        turkish: "Patates Cips",
         price: "200₺",
         portion: "2 medium potatoes",
+        image: "/menu/patates.jpg.png",
+        desc: "Freshly fried crispy potatoes",
       },
     ],
   },
   {
-    title: "🥪 Fish Sandwiches (Ekmek Arası)",
+    title: "🥪 Fish Sandwiches",
     items: [
       {
         name: "Sardine Sandwich",
-        turkish: "sardalya ekmek",
+        turkish: "Sardalya Ekmek",
         price: "200₺",
-        portion: "11–12 fish, half loaf of bread, rocket and onion",
+        portion: "11–12 fish, half loaf",
         allergens: ["Fish", "Gluten"],
+        image: "/menu/sardalya-ekmek.jpg.png",
+        desc: "Served with rocket and onion",
       },
       {
         name: "Whiting Sandwich",
-        turkish: "mezgit ekmek",
+        turkish: "Mezgit Ekmek",
         price: "300₺",
-        portion: "100 g fish, half loaf of bread, rocket and onion",
+        portion: "100 g fish, half loaf",
         allergens: ["Fish", "Gluten"],
+        desc: "Served with rocket and onion",
       },
       {
         name: "Sole Sandwich",
-        turkish: "dil balığı ekmek",
+        turkish: "Dil Balığı Ekmek",
         price: "300₺",
-        portion: "100 g fish, half loaf of bread, rocket and onion",
+        portion: "100 g fish, half loaf",
         allergens: ["Fish", "Gluten"],
+        desc: "Served with rocket and onion",
       },
     ],
   },
   {
-    title: "🥗 Salads (Salatalar)",
+    title: "🥗 Salads",
     items: [
       {
         name: "Turkish Shepherd's Salad",
-        turkish: "çoban salatası",
+        turkish: "Çoban Salatası",
         price: "200–300₺",
-        portion: "Approx. 100 g, with olive oil",
+        portion: "Approx. 100 g",
+        image: "/menu/salata.jpg.png",
+        desc: "Fresh seasonal vegetables with olive oil",
       },
       {
         name: "Green Salad",
-        turkish: "yeşil salata",
+        turkish: "Yeşil Salata",
         price: "200–300₺",
-        portion: "Approx. 100 g, with olive oil",
+        portion: "Approx. 100 g",
+        image: "/menu/salata.jpg.png",
+        desc: "Fresh greens with olive oil",
       },
     ],
   },
   {
-    title: "🔥 Grilled Fish (Izgara)",
+    title: "🔥 Grilled Fish",
     items: [
       {
         name: "Grilled Sardines",
-        turkish: "ızgara sardalya",
+        turkish: "Izgara Sardalya",
         price: "350₺",
-        portion: "350–400 g, whole, no added oil",
+        portion: "350–400 g",
         allergens: ["Fish"],
-        image: "/sardalye.jpg",
+        image: "/menu/izgara-sardalya.jpg.png",
+        desc: "Fresh sardines grilled over charcoal",
       },
       {
         name: "Grilled Sea Bream",
-        turkish: "ızgara çipura",
+        turkish: "Izgara Çipura",
         price: "500₺",
-        portion: "400–450 g, whole, no added oil",
+        portion: "400–450 g",
         allergens: ["Fish"],
-        image: "/cipura.jpg",
+        image: "/menu/çipura.jpg.png",
+        desc: "Daily fresh sea bream grilled over charcoal",
       },
       {
         name: "Grilled Sea Bass",
-        turkish: "ızgara levrek",
+        turkish: "Izgara Levrek",
         price: "600₺",
-        portion: "400–450 g, whole, no added oil",
+        portion: "400–450 g",
         allergens: ["Fish"],
+        desc: "Fresh sea bass grilled over charcoal",
       },
       {
         name: "Grilled Bonito",
-        turkish: "ızgara palamut",
+        turkish: "Izgara Palamut",
         price: "400₺",
-        portion: "Whole fish, weight varies daily, no added oil",
+        portion: "Whole fish",
         allergens: ["Fish"],
+        image: "/menu/palamut.jpg.png",
+        desc: "Fresh bonito grilled over charcoal",
       },
     ],
   },
   {
-    title: "🥗 Aegean Meze (Mezeler)",
+    title: "🥗 Aegean Meze",
     items: [
       {
-        name: "Octopus",
-        turkish: "ahtapot",
+        name: "Octopus Salad",
+        turkish: "Ahtapot Salatası",
         price: "550₺",
         portion: "Approx. 100 g",
         allergens: ["Molluscs"],
-        image: "/ahtapot.jpg",
+        image: "/menu/ahtapot-marin.jpg.png",
+        desc: "With a special olive oil dressing",
       },
       {
         name: "Shrimp",
-        turkish: "karides",
+        turkish: "Karides",
         price: "500₺",
         portion: "Approx. 100 g",
         allergens: ["Crustaceans"],
-        image: "/karides.jpg",
+        image: "/menu/karides.jpg.png",
+        desc: "Fresh daily shrimp",
       },
       {
-        name: "Lakerda (Cured Bonito)",
-        turkish: "lakerda",
+        name: "Lakerda",
+        turkish: "Lakerda",
         price: "450₺",
         portion: "Approx. 100 g",
         allergens: ["Fish"],
-        image: "/lakerda.jpg",
+        image: "/menu/lakerda.jpg.png",
+        desc: "Prepared using traditional methods",
       },
       {
         name: "Marinated Sea Bass",
-        turkish: "levrek marin",
+        turkish: "Levrek Marin",
         price: "550₺",
         portion: "Approx. 100 g",
         allergens: ["Fish"],
+        image: "/menu/levrek-marin.jpg.png",
+        desc: "Traditional marinated sea bass",
       },
       {
         name: "Marinated Anchovies",
-        turkish: "hamsi marin",
+        turkish: "Hamsi Marin",
         price: "200₺",
         portion: "Approx. 100 g",
         allergens: ["Fish"],
+        image: "/menu/hamsi-marin.jpg.png",
+        desc: "Fresh marinated anchovies",
       },
       {
         name: "Marinated Sardines",
-        turkish: "sardalya marin",
+        turkish: "Sardalya Marin",
         price: "300₺",
         portion: "Approx. 100 g",
         allergens: ["Fish"],
+        image: "/menu/sardalye-marin.jpg.png",
+        desc: "Aegean-style marinated sardines",
       },
       {
         name: "Sea Fennel",
-        turkish: "deniz börülcesi",
+        turkish: "Deniz Börülcesi",
         price: "200₺",
         portion: "Approx. 100 g",
+        image: "/menu/deniz-borulcesi.jpg.png",
+        desc: "Aegean sea fennel with olive oil",
       },
       {
         name: "Yogurt Meze",
-        turkish: "yoğurtlu",
+        turkish: "Yoğurtlu",
         price: "200₺",
         portion: "Approx. 100 g",
         allergens: ["Milk"],
+        image: "/menu/yogurtlu.jpg.png",
+        desc: "Traditional yogurt-based meze",
       },
     ],
   },
   {
-    title: "🥤 Drinks (İçecekler)",
+    title: "🥤 Drinks",
     items: [
       {
         name: "Canned Soft Drinks",
-        turkish: "kutu meşrubat",
+        turkish: "Kutu Meşrubat",
         price: "70₺",
         portion: "330 ml",
-        calories: "Approx. 140 kcal",
+        image: "/menu/kutu-meşrubatlar.jpg.png",
+        desc: "Chilled canned drinks",
       },
       {
         name: "Homemade Lemonade",
-        turkish: "limonata",
+        turkish: "Limonata",
         price: "70₺",
         portion: "330 ml",
-        calories: "Approx. 130–160 kcal",
+        image: "/menu/limonata.jpg.png",
+        desc: "Refreshing homemade lemonade",
       },
       {
         name: "Turkish Turnip Juice",
-        turkish: "şalgam suyu",
+        turkish: "Şalgam Suyu",
         price: "65₺",
         portion: "300 ml",
-        calories: "Approx. 20–30 kcal",
+        image: "/menu/şalgam-suyu.jpg.png",
+        desc: "Traditional Turkish turnip juice",
       },
       {
         name: "Pickle Juice",
-        turkish: "turşu suyu",
+        turkish: "Turşu Suyu",
         price: "70₺",
         portion: "250 ml",
-        calories: "Approx. 5–15 kcal",
+        image: "/menu/turşu suyu.jpg.png",
+        desc: "Traditional pickle juice",
       },
       {
         name: "Water",
-        turkish: "su",
+        turkish: "Su",
         price: "20₺",
         portion: "500 ml",
-        calories: "0 kcal",
+        image: "/menu/su.jpg.png",
+        desc: "Bottled drinking water",
       },
       {
         name: "Mineral Water",
-        turkish: "soda",
+        turkish: "Soda",
         price: "40₺",
         portion: "200 ml",
-        calories: "0 kcal",
+        image: "/menu/soda.jpg.png",
+        desc: "Sparkling mineral water",
       },
       {
         name: "Bottled Soft Drinks",
-        turkish: "şişe meşrubat",
+        turkish: "Şişe Meşrubat",
         price: "60₺",
         portion: "250 ml",
-        calories: "Approx. 105 kcal",
+        image: "/menu/şişe-meşrubat.jpg.png",
+        desc: "Chilled bottled drinks",
       },
     ],
   },
@@ -339,152 +365,129 @@ const categories: {
 
 export default function EnglishMenu() {
   return (
-    <main className="min-h-screen bg-[#08253f] text-white">
-      <header className="bg-[#061a2e] border-b border-cyan-400/30">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between">
+    <main className="min-h-screen bg-white text-[#08253f]">
+      <header className="bg-[#061a2e] text-white py-5">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <a href="/en" className="font-bold text-xl">
             Balıkçı <span className="text-cyan-400">Halil</span> Geyikli
           </a>
 
-          <div className="flex items-center gap-3">
-            <a
-              href="/en"
-              className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition"
-            >
+          <div className="flex gap-3">
+            <a href="/en" className="px-4 py-2 rounded-full bg-white/10">
               Home
             </a>
-            <a
-              href="/menu"
-              className="px-4 py-2 rounded-full bg-cyan-500 hover:bg-cyan-600 transition font-bold"
-            >
+            <a href="/menu" className="px-4 py-2 rounded-full bg-cyan-500 font-bold">
               🇹🇷 TR
             </a>
           </div>
         </div>
       </header>
 
-      <section className="bg-[#08253f] py-16 sm:py-24 text-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold">
-              Balıkçı Halil
-            </h1>
-            <p className="text-cyan-300 mt-3 text-lg">
-              English Menu
-            </p>
-            <div className="w-20 h-1 bg-cyan-400 mx-auto mt-5 rounded-full" />
-          </div>
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <h1 className="text-5xl font-bold text-center text-[#08253f]">
+            Our Menu
+          </h1>
 
-          <div className="space-y-12">
-            {categories.map((category) => (
-              <div key={category.title}>
-                <h2 className="text-2xl font-bold text-cyan-300 mb-5 border-b border-white/20 pb-3">
-                  {category.title}
-                </h2>
+          <p className="text-center text-gray-500 mt-4 mb-14">
+            Fresh daily products from the Aegean
+          </p>
 
-                <div className="space-y-4">
-                  {category.items.map((item, index) => (
-                    <div
-                      key={`${category.title}-${item.name}-${index}`}
-                      className="flex gap-3 sm:gap-5 bg-white rounded-xl p-2 sm:p-3 border border-cyan-100/30 shadow-lg hover:shadow-xl transition-all"
-                    >
-                      <div className="relative w-24 h-24 sm:w-36 sm:h-32 shrink-0 overflow-hidden rounded-lg bg-[#eaf2f7]">
-                        {item.image ? (
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            fill
-                            sizes="(max-width: 640px) 96px, 144px"
-                            className="object-cover"
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center text-[#08253f] text-xs font-semibold text-center p-2">
-                            Photo coming soon
-                          </div>
-                        )}
-                      </div>
+          {categories.map((category) => (
+            <section key={category.title} className="mb-16">
+              <h2 className="text-3xl font-bold text-[#08253f] mb-8 border-b pb-4">
+                {category.title}
+              </h2>
 
-                      <div className="flex-1 min-w-0 flex flex-col justify-between py-2">
-                        <div>
-                          <h3 className="text-base sm:text-xl font-bold text-[#08253f]">
-                            {item.name}
-                          </h3>
-                          <p className="text-xs text-gray-400 mt-0.5">
-                            ({item.turkish})
-                          </p>
-
-                          {item.portion && (
-                            <p className="mt-2 text-xs sm:text-sm text-gray-500">
-                              {item.portion}
-                            </p>
-                          )}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {category.items.map((item) => (
+                  <article
+                    key={item.name}
+                    className="rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 hover:shadow-2xl transition duration-300 bg-white border border-gray-100"
+                  >
+                    <div className="relative aspect-square w-full bg-white">
+                      {item.image ? (
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-contain p-3"
+                        />
+                      ) : (
+                        <div className="h-full flex items-center justify-center text-gray-400">
+                          Balıkçı Halil
                         </div>
-
-                        <div className="border-t border-[#dce6ed] pt-2 flex items-center justify-between gap-2">
-                          <span className="text-xs sm:text-sm text-gray-500">
-                            Balıkçı Halil
-                          </span>
-                          <span className="text-lg sm:text-xl font-bold text-[#08253f] whitespace-nowrap">
-                            {item.price}
-                          </span>
-                        </div>
-
-                        {(item.calories || item.portion || item.allergens) && (
-                          <details className="mt-2 text-sm text-[#08253f]">
-                            <summary className="cursor-pointer font-semibold text-cyan-700">
-                              Nutrition & allergen information
-                            </summary>
-
-                            <div className="mt-2 space-y-1 text-gray-600">
-                              {item.portion && (
-                                <p>Portion: {item.portion}</p>
-                              )}
-                              {item.calories && (
-                                <p>Energy: {item.calories}</p>
-                              )}
-                              {item.allergens && (
-                                <p>
-                                  <span className="font-semibold text-[#08253f]">
-                                    Allergens:
-                                  </span>{" "}
-                                  {item.allergens.join(" · ")}
-                                </p>
-                              )}
-                            </div>
-                          </details>
-                        )}
-                      </div>
+                      )}
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
 
-          <p className="text-center text-cyan-300 mt-14 text-sm">
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold text-[#08253f]">
+                        {item.name}
+                      </h3>
+
+                      <p className="text-sm text-gray-400 mt-1">
+                        ({item.turkish})
+                      </p>
+
+                      <p className="mt-3 text-gray-600">{item.desc}</p>
+
+                      {item.portion && (
+                        <p className="mt-2 text-sm text-gray-500">
+                          Portion: {item.portion}
+                        </p>
+                      )}
+
+                      <div className="mt-5 pt-4 border-t flex justify-between items-center">
+                        <span className="text-sm text-gray-500">
+                          Balıkçı Halil
+                        </span>
+
+                        <span className="text-2xl font-bold text-[#08253f]">
+                          {item.price}
+                        </span>
+                      </div>
+
+                      {(item.calories || item.allergens) && (
+                        <details className="mt-3 text-sm">
+                          <summary className="cursor-pointer font-semibold text-cyan-700">
+                            Nutrition & allergen information
+                          </summary>
+
+                          <div className="mt-2 text-gray-600 space-y-1">
+                            {item.calories && (
+                              <p>Energy: {item.calories}</p>
+                            )}
+
+                            {item.allergens && (
+                              <p>
+                                Allergens: {item.allergens.join(" · ")}
+                              </p>
+                            )}
+                          </div>
+                        </details>
+                      )}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+
+          <p className="text-center text-[#08253f] mt-12">
             🌊 Fresh from the sea – Enjoy your meal! 🌊
           </p>
 
-          <div className="mt-5 space-y-2 text-center">
-            <p className="text-white/60 text-xs leading-relaxed">
-              * Nutritional and energy values are estimates. They may vary
-              depending on portion size and preparation method.
-            </p>
-            <p className="text-white/60 text-xs leading-relaxed">
-              Allergen Notice: Our dishes may contain various allergens.
-              Please inform our staff before ordering if you have any
-              allergies or food sensitivities. Cross-contact may occur
-              during food preparation.
-            </p>
-          </div>
+          <p className="text-center text-gray-400 text-xs mt-4">
+            Nutritional values are estimates. Please inform our staff about
+            any allergies or food sensitivities.
+          </p>
         </div>
       </section>
 
-      <footer className="py-8 bg-[#061a2e] border-t border-white/10 text-center">
-        <p className="text-gray-400">
-          © {new Date().getFullYear()} Balıkçı Halil Geyikli
-        </p>
-        <p className="text-gray-500 text-sm mt-2">
+      <footer className="py-8 bg-[#061a2e] text-center text-gray-400">
+        <p>© {new Date().getFullYear()} Balıkçı Halil Geyikli</p>
+        <p className="text-sm mt-2">
           Fish & Seafood Restaurant in Geyikli, Çanakkale
         </p>
       </footer>

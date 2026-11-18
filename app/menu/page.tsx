@@ -1,20 +1,18 @@
+
 import type { Metadata } from "next";
 import FullMenu from "../components/FullMenu";
 
 export const metadata: Metadata = {
-  title: "Menü | Balık, Meze ve Deniz Ürünleri",
+  title: "Menü | Balıkçı Halil Geyikli",
   description:
     "Balıkçı Halil Geyikli menüsü. Günlük taze balıklar, deniz ürünleri, Ege mezeleri, balık ekmek, kalamar ve ızgara seçenekleri.",
-
   alternates: {
     canonical: "/menu",
   },
-
   robots: {
     index: true,
     follow: true,
   },
-
   openGraph: {
     title: "Balıkçı Halil Geyikli Menü | Balık, Meze ve Deniz Ürünleri",
     description:
@@ -24,7 +22,6 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Balıkçı Halil Geyikli Menü",
@@ -34,11 +31,5 @@ export const metadata: Metadata = {
 };
 
 export default function MenuPage() {
-  return (
-    <main className="min-h-screen bg-[#08253f] text-white">
-      <div className="py-10">
-        <FullMenu />
-      </div>
-    </main>
-  );
+  return <FullMenu />;
 }

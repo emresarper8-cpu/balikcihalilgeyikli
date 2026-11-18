@@ -68,6 +68,7 @@ const categories: {
         portion: "250 g, kılçıklı, unlu",
         calories: "400–550 kcal",
         allergens: ["Balık", "Gluten"],
+        image: "/menu/palamut.jpg.png",
       },
       {
         name: "Köfte",
@@ -143,6 +144,7 @@ const categories: {
         name: "Yeşil Salata",
         price: "200–300₺",
         portion: "Yaklaşık 100 g, zeytinyağlı",
+        image: "/menu/salata.jpg.png",
       },
     ],
   },
@@ -168,6 +170,7 @@ const categories: {
         price: "600₺",
         portion: "400–450 g, bütün, yağ eklenmeden",
         allergens: ["Balık"],
+      
       },
       {
         name: "Palamut",
@@ -267,7 +270,7 @@ const categories: {
         price: "70₺",
         portion: "330 ml",
         calories: "Yaklaşık 5–15 kcal",
-        image: "/menu/tur%C5%9Fu%20suyu.jpg.png",
+        image: "/menu/turşu%20suyu.jpg.png",
       },
       {
         name: "Su",
@@ -288,7 +291,7 @@ const categories: {
         price: "60₺",
         portion: "250 ml",
         calories: "Yaklaşık 105 kcal",
-        image: "/menu/%C5%9Fi%C5%9Fe-me%C5%9Frubat.jpg.png",
+        image: "/menu/şişe-meşrubat.jpg.png",
       },
     ],
   },
@@ -296,83 +299,93 @@ const categories: {
 
 export default function FullMenu() {
   return (
-    <section className="bg-[#08253f] py-16 sm:py-24 text-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold">
-            Balıkçı Halil
-          </h2>
+    <main className="min-h-screen bg-white text-[#08253f]">
+      <header className="bg-[#061a2e] text-white py-5">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          <a href="/" className="font-bold text-xl">
+            Balıkçı <span className="text-cyan-400">Halil</span> Geyikli
+          </a>
 
-          <p className="text-cyan-300 mt-3 text-lg">
-            Dijital Menü
+          <div className="flex gap-3">
+            <a href="/" className="px-4 py-2 rounded-full bg-white/10">
+              Ana Sayfa
+            </a>
+            <a
+              href="/en/menu"
+              className="px-4 py-2 rounded-full bg-cyan-500 font-bold"
+            >
+              EN
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <h1 className="text-5xl font-bold text-center text-[#08253f]">
+            Menümüz
+          </h1>
+
+          <p className="text-center text-gray-500 mt-4 mb-14">
+            Ege'den günlük taze lezzetler
           </p>
 
-          <div className="w-20 h-1 bg-cyan-400 mx-auto mt-5 rounded-full" />
-        </div>
-
-        <div className="space-y-12">
           {categories.map((category) => (
-            <div key={category.title}>
-              <h3 className="text-2xl font-bold text-cyan-300 mb-5 border-b border-white/20 pb-3">
+            <section key={category.title} className="mb-16">
+              <h2 className="text-3xl font-bold text-[#08253f] mb-8 border-b pb-4">
                 {category.title}
-              </h3>
+              </h2>
 
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.items.map((item, index) => (
-                  <div
+                  <article
                     key={`${category.title}-${item.name}-${index}`}
-                    className="flex gap-3 sm:gap-5 bg-white rounded-xl p-2 sm:p-3 border border-cyan-100/30 shadow-lg hover:shadow-xl transition-all"
+                    className="rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 hover:shadow-2xl transition duration-300 bg-white border border-gray-100"
                   >
-                    <div className="relative w-24 h-24 sm:w-36 sm:h-32 shrink-0 overflow-hidden rounded-lg bg-white">
+                    <div className="relative aspect-square w-full bg-white">
                       {item.image ? (
                         <Image
                           src={item.image}
                           alt={item.name}
                           fill
-                          loading={
-                            category.title === "🍳 Tava" &&
-                            item.name === "Sardalya"
-                              ? "eager"
-                              : "lazy"
-                          }
-                          sizes="(max-width: 640px) 96px, 144px"
-                          className="object-contain p-1"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-contain p-3"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-[#08253f] text-xs font-semibold text-center p-2">
-                          Fotoğraf yakında
+                        <div className="h-full flex items-center justify-center text-gray-400">
+                          Balıkçı Halil
                         </div>
                       )}
                     </div>
 
-                    <div className="flex-1 min-w-0 flex flex-col justify-between py-2">
-                      <div>
-                        <h4 className="text-base sm:text-xl font-bold text-[#08253f]">
-                          {item.name}
-                        </h4>
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold text-[#08253f]">
+                        {item.name}
+                      </h3>
 
-                        {item.portion && (
-                          <p className="mt-2 text-xs sm:text-sm text-gray-500">
-                            {item.portion}
-                          </p>
-                        )}
-                      </div>
-<div className="border-t border-[#dce6ed] pt-2 flex items-center justify-end">
-                      
-                     
+                      {item.portion && (
+                        <p className="mt-3 text-gray-600">
+                          Porsiyon: {item.portion}
+                        </p>
+                      )}
 
-                        <span className="text-lg sm:text-xl font-bold text-[#08253f] whitespace-nowrap">
+                      <div className="mt-5 pt-4 border-t flex justify-between items-center">
+                        <span className="text-sm text-gray-500">
+                          Balıkçı Halil
+                        </span>
+
+                        <span className="text-2xl font-bold text-[#08253f]">
                           {item.price}
                         </span>
                       </div>
 
-                      {(item.calories || item.portion || item.allergens) && (
-                        <details className="mt-2 text-sm text-[#08253f]">
+                      {(item.calories || item.allergens || item.portion) && (
+                        <details className="mt-3 text-sm">
                           <summary className="cursor-pointer font-semibold text-cyan-700">
                             Besin ve alerjen bilgisi
                           </summary>
 
-                          <div className="mt-2 space-y-1 text-gray-600">
+                          <div className="mt-2 text-gray-600 space-y-1">
                             {item.portion && (
                               <p>Porsiyon: {item.portion}</p>
                             )}
@@ -393,31 +406,38 @@ export default function FullMenu() {
                         </details>
                       )}
                     </div>
-                  </div>
+                  </article>
                 ))}
               </div>
-            </div>
+            </section>
           ))}
-        </div>
 
-        <p className="text-center text-cyan-300 mt-14 text-sm">
-          🌊 Denizden Gelen Tazelik - Afiyet Olsun! 🌊
+          <p className="text-center text-[#08253f] mt-12">
+            🌊 Denizden Gelen Tazelik - Afiyet Olsun! 🌊
+          </p>
+
+          <div className="text-center text-gray-400 text-xs mt-4 space-y-2">
+            <p>
+              Besin ve enerji değerleri tahminidir. Porsiyon miktarı ve
+              hazırlanma şekline göre değişiklik gösterebilir.
+            </p>
+
+            <p>
+              Alerjen Uyarısı: Ürünlerimiz çeşitli alerjenler içerebilir.
+              Alerjiniz veya gıda hassasiyetiniz varsa sipariş öncesinde
+              lütfen personelimize bilgi veriniz. Aynı mutfakta hazırlık
+              yapılması nedeniyle çapraz bulaşma riski bulunabilir.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-8 bg-[#061a2e] text-center text-gray-400">
+        <p>© {new Date().getFullYear()} Balıkçı Halil Geyikli</p>
+        <p className="text-sm mt-2">
+          Geyikli, Çanakkale Balık ve Deniz Ürünleri
         </p>
-
-        <div className="mt-5 space-y-2 text-center">
-          <p className="text-white/70 text-xs leading-relaxed">
-            * Besin ve enerji değerleri tahminidir. Porsiyon miktarı ve
-            hazırlanma şekline göre değişiklik gösterebilir.
-          </p>
-
-          <p className="text-white/70 text-xs leading-relaxed">
-            Alerjen Uyarısı: Ürünlerimiz çeşitli alerjenler içerebilir.
-            Alerjiniz veya gıda hassasiyetiniz varsa sipariş öncesinde
-            lütfen personelimize bilgi veriniz. Aynı mutfakta hazırlık
-            yapılması nedeniyle çapraz bulaşma riski bulunabilir.
-          </p>
-        </div>
-      </div>
-    </section>
+      </footer>
+    </main>
   );
 }
