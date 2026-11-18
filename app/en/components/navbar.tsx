@@ -8,72 +8,48 @@ export default function EnglishNavbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#061a2e]/95 via-[#0b3552]/95 to-[#061a2e]/95 backdrop-blur-md border-b border-cyan-400/30 z-50 shadow-xl">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
 
         {/* LOGO */}
         <a href="/en" className="shrink-0">
-          <div className="bg-white/95 rounded-xl px-2 py-1 shadow-lg shadow-cyan-500/10">
+          <div className="bg-white/95 rounded-xl px-2 py-1 shadow-lg">
             <img
               src="/logo.jpg"
               alt="Balıkçı Halil Geyikli"
-              className="h-16 md:h-20 w-auto object-contain"
+              className="h-14 md:h-16 w-auto object-contain"
             />
           </div>
         </a>
 
         {/* DESKTOP MENU */}
-        <div className="hidden md:flex items-center gap-8 text-white font-semibold">
-
+        <div className="hidden md:flex items-center gap-3 text-white font-semibold">
           <a
             href="/en"
-            className="group flex flex-col items-center gap-1 text-cyan-300 hover:text-cyan-200 transition"
+            className="px-4 py-2 rounded-full bg-white/10 hover:bg-cyan-500 transition"
           >
-            <span className="text-xl">⌂</span>
-            <span>Home</span>
+            Home
           </a>
 
           <a
             href="/en/menu"
-            className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
+            className="px-4 py-2 rounded-full bg-white/10 hover:bg-cyan-500 transition"
           >
-            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 group-hover:border-cyan-400 transition shadow-md">
-              <img
-                src="/balık.jpg"
-                alt="Fish menu"
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
-              />
-            </div>
-            <span>Menu</span>
+            Menu
           </a>
 
           <a
             href="/en#gallery"
-            className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
+            className="px-4 py-2 rounded-full bg-white/10 hover:bg-cyan-500 transition"
           >
-            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 group-hover:border-cyan-400 transition shadow-md">
-              <img
-                src="/bahce.jpg"
-                alt="Balıkçı Halil garden"
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
-              />
-            </div>
-            <span>Gallery</span>
+            Gallery
           </a>
 
           <a
             href="/en#contact"
-            className="group flex flex-col items-center gap-1 hover:text-cyan-300 transition"
+            className="px-4 py-2 rounded-full bg-white/10 hover:bg-cyan-500 transition"
           >
-            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 group-hover:border-cyan-400 transition shadow-md">
-              <img
-                src="/kapı.jpg"
-                alt="Balıkçı Halil"
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
-              />
-            </div>
-            <span>Contact</span>
+            Contact
           </a>
-
         </div>
 
         {/* RIGHT SIDE */}
@@ -86,7 +62,7 @@ export default function EnglishNavbar() {
               className="px-3 py-2 rounded-full text-white text-sm font-bold hover:bg-white/10 transition"
               aria-label="Turkish"
             >
-              🇹🇷 TR
+              TR
             </a>
 
             <a
@@ -94,18 +70,17 @@ export default function EnglishNavbar() {
               className="px-3 py-2 rounded-full bg-cyan-500 text-white text-sm font-bold"
               aria-label="English"
             >
-              🇬🇧 EN
+              EN
             </a>
           </div>
 
           {/* CALL */}
           <a
             href="tel:+905433450017"
-            className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 transition px-7 py-3 rounded-full font-bold text-white shadow-lg shadow-cyan-500/20"
+            className="bg-cyan-500 hover:bg-cyan-400 transition px-6 py-3 rounded-full font-bold text-white shadow-lg"
           >
-            📞 Call
+            Call
           </a>
-
         </div>
 
         {/* MOBILE BUTTON */}
@@ -116,7 +91,6 @@ export default function EnglishNavbar() {
         >
           ☰
         </button>
-
       </div>
 
       {/* MOBILE MENU */}
@@ -124,61 +98,30 @@ export default function EnglishNavbar() {
         <div className="md:hidden bg-[#061a2e] border-t border-cyan-400/20 px-6 py-5">
           <div className="flex flex-col gap-4 text-white font-semibold">
 
-            <a
-              href="/en"
-              onClick={() => setMenuOpen(false)}
-              className="text-cyan-300 hover:text-cyan-200 transition"
-            >
-              🏠 Home
+            <a href="/en" onClick={() => setMenuOpen(false)}>
+              Home
             </a>
 
-            <a
-              href="/en/menu"
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 hover:text-cyan-300 transition"
-            >
-              <img
-                src="/balık.jpg"
-                alt=""
-                className="w-10 h-10 rounded-full object-cover"
-              />
+            <a href="/en/menu" onClick={() => setMenuOpen(false)}>
               Menu
             </a>
 
-            <a
-              href="/en#gallery"
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 hover:text-cyan-300 transition"
-            >
-              <img
-                src="/bahce.jpg"
-                alt=""
-                className="w-10 h-10 rounded-full object-cover"
-              />
+            <a href="/en#gallery" onClick={() => setMenuOpen(false)}>
               Gallery
             </a>
 
-            <a
-              href="/en#contact"
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 hover:text-cyan-300 transition"
-            >
-              <img
-                src="/kapı.jpg"
-                alt=""
-                className="w-10 h-10 rounded-full object-cover"
-              />
+            <a href="/en#contact" onClick={() => setMenuOpen(false)}>
               Contact
             </a>
 
             {/* LANGUAGE */}
-            <div className="flex gap-2 pt-2 border-t border-white/10">
+            <div className="flex gap-2 pt-3 border-t border-white/10">
               <a
                 href="/"
                 onClick={() => setMenuOpen(false)}
                 className="flex-1 bg-white/10 text-center py-3 rounded-full font-bold"
               >
-                🇹🇷 Türkçe
+                Türkçe
               </a>
 
               <a
@@ -186,7 +129,7 @@ export default function EnglishNavbar() {
                 onClick={() => setMenuOpen(false)}
                 className="flex-1 bg-cyan-500 text-center py-3 rounded-full font-bold"
               >
-                🇬🇧 English
+                English
               </a>
             </div>
 
@@ -195,9 +138,8 @@ export default function EnglishNavbar() {
               href="tel:+905433450017"
               className="bg-cyan-500 hover:bg-cyan-400 text-center py-3 rounded-full font-bold transition"
             >
-              📞 Call
+              Call
             </a>
-
           </div>
         </div>
       )}

@@ -59,113 +59,54 @@ const featuredDishes = [
 export default function EnglishHomePage() {
   return (
     <main className="bg-[#071826] text-white">
-
       <EnglishNavbar />
 
       {/* HERO */}
       <section
-        className="relative min-h-[90vh] flex items-center justify-center text-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/bahce.jpg')" }}
+        className="min-h-screen bg-cover bg-center relative flex items-center justify-center text-center"
+        style={{
+          backgroundImage: "url('/bahce.jpg')",
+        }}
       >
-        <div className="absolute inset-0 bg-[#04192d]/70" />
+        <div className="absolute inset-0 bg-black/70"></div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 py-24">
-
-          <p className="text-cyan-300 tracking-[6px] font-semibold text-sm">
+        <div className="relative z-10 px-6 py-24">
+          <h2 className="text-yellow-300 tracking-[8px] text-lg font-semibold">
             SINCE 1999
-          </p>
+          </h2>
 
-          <h1 className="text-5xl md:text-7xl font-bold mt-6">
-            Balıkçı Halil Geyikli
+          <h1 className="text-5xl md:text-7xl font-extrabold mt-8 drop-shadow-xl text-white leading-tight">
+            Balıkçı <span className="text-cyan-400">Halil</span>
+            <br />
+            Geyikli
           </h1>
 
-          <p className="text-2xl md:text-3xl text-gray-200 mt-5">
-            Fish & Seafood Restaurant
-          </p>
+          <h3 className="text-2xl md:text-4xl text-cyan-300 font-bold mt-5">
+            Fish Restaurant
+          </h3>
 
-          <p className="text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
-            Fresh fish, delicious Aegean meze and a warm atmosphere
-            in the heart of Geyikli.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href="/en/menu"
-              className="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-full font-bold"
+              className="bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full text-lg font-bold text-white transition"
             >
-              🍽️ View Our Menu
+              🍽️ View Digital Menu
             </a>
 
             <a
               href="#gallery"
-              className="border border-white hover:bg-white hover:text-[#071826] transition px-8 py-4 rounded-full font-bold"
+              className="border-2 border-white hover:bg-white hover:text-black px-8 py-4 rounded-full text-lg font-bold text-white transition"
             >
               📸 View Gallery
             </a>
-
           </div>
-
         </div>
       </section>
 
-      {/* FEATURED DISHES */}
-      <section className="bg-[#08253f] py-24">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="text-center mb-14">
-            <p className="text-cyan-400 tracking-[4px] text-sm font-semibold">
-              FROM THE AEGEAN SEA
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-bold mt-4">
-              Fresh Fish & Seafood in Geyikli
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            {featuredDishes.map((dish) => (
-              <div
-                key={dish.name}
-                className="bg-[#10304f] rounded-3xl overflow-hidden shadow-xl"
-              >
-                <img
-                  src={dish.image}
-                  alt={dish.name}
-                  className="w-full h-72 object-cover"
-                />
-
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white">
-                    {dish.name}
-                  </h3>
-
-                  <p className="text-gray-400 mt-3">
-                    {dish.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-
-          </div>
-
-          <div className="text-center mt-12">
-            <a
-              href="/en/menu"
-              className="inline-block bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-full font-bold"
-            >
-              Explore Our Menu →
-            </a>
-          </div>
-
-        </div>
-      </section>
-
+   
       {/* INTRODUCTION */}
       <section className="bg-[#071826] py-24">
         <div className="max-w-5xl mx-auto px-6 text-center">
-
           <p className="text-cyan-400 tracking-[4px] text-sm font-semibold">
             FISH RESTAURANT IN GEYİKLİ
           </p>
@@ -187,14 +128,12 @@ export default function EnglishHomePage() {
           >
             Explore Geyikli & Its Surroundings →
           </a>
-
         </div>
       </section>
 
       {/* GEYIKLI & SURROUNDINGS GUIDE */}
       <section className="bg-[#0b2538] py-24 px-6">
         <div className="max-w-6xl mx-auto text-center">
-
           <p className="text-cyan-400 tracking-[4px] text-sm font-semibold">
             DISCOVER THE AEGEAN
           </p>
@@ -211,7 +150,6 @@ export default function EnglishHomePage() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mt-12">
-
             <div className="bg-[#10304f] rounded-2xl p-8">
               <div className="text-4xl">🏛️</div>
               <h3 className="text-xl font-bold mt-4">
@@ -241,7 +179,6 @@ export default function EnglishHomePage() {
                 Find beautiful coastal spots and places to explore.
               </p>
             </div>
-
           </div>
 
           <a
@@ -250,7 +187,6 @@ export default function EnglishHomePage() {
           >
             Explore the Guide →
           </a>
-
         </div>
       </section>
 
@@ -278,7 +214,6 @@ export default function EnglishHomePage() {
 
       <WhatsApp />
       <Footer />
-
     </main>
   );
 }

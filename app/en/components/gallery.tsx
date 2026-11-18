@@ -1,17 +1,17 @@
 
 export default function Gallery() {
   const images = [
-    "/cipura.jpg",
-    "/sardalye.jpg",
-    "/lakerda.jpg",
-    "/karides.jpg",
-    "/ahtapot.jpg",
-    "/bahce.jpg",
+      "/bahce.jpg",
     "/bahce1.jpg",
     "/bahce2.jpg",
-    "/balık.jpg",
-    "/balık1.jpg",
+    "/bahce3.jpg",
+    "/bahce4.jpg",
+    "/balik.jpg",
+    "/balik1.jpg",
+    "/dükkan-önü.jpg",
     "/kapı.jpg",
+    "/masa.jpg",
+    "/sardalye1.jpg",
     "/teras.jpg",
     "/teras1.jpg",
   ];

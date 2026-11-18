@@ -11,44 +11,44 @@ import CTA from "./components/cta";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-[#071826] text-white">
       <Navbar />
 
       {/* HERO */}
       <section
-        className="relative min-h-screen flex items-center justify-center text-center px-6"
+        className="min-h-screen bg-cover bg-center relative flex items-center justify-center text-center"
         style={{
           backgroundImage: "url('/bahce.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/65"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto pt-20">
-          <p className="text-yellow-300 tracking-[7px] text-sm md:text-base font-semibold">
+        <div className="relative z-10 px-6 py-24">
+          <h2 className="text-yellow-300 tracking-[8px] text-lg font-semibold">
             SINCE 1999
-          </p>
-
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mt-5 leading-tight">
-            Balıkçı <span className="text-cyan-400">Halil</span> Geyikli
-          </h1>
-
-          <h2 className="text-2xl md:text-4xl text-cyan-300 mt-3 font-semibold">
-            Balık Restoranı
           </h2>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+          <h1 className="text-5xl md:text-7xl font-extrabold mt-8 drop-shadow-xl text-white leading-tight">
+            Balıkçı <span className="text-cyan-400">Halil</span>
+            <br />
+            Geyikli
+          </h1>
+
+          <h3 className="text-2xl md:text-4xl text-cyan-300 font-bold mt-5">
+            Balık Restoranı
+          </h3>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href="/menu"
-              className="bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full font-bold text-lg transition shadow-lg"
+              className="bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full text-lg font-bold text-white transition"
             >
               🍽️ Dijital Menüyü Gör
             </a>
 
             <a
               href="#galeri"
-              className="border border-white/40 hover:bg-white/10 px-8 py-4 rounded-full font-bold text-lg transition"
+              className="border-2 border-white hover:bg-white hover:text-black px-8 py-4 rounded-full text-lg font-bold text-white transition"
             >
               📸 Galeriyi Gör
             </a>
@@ -57,17 +57,17 @@ export default function Home() {
       </section>
 
       {/* KISA TANITIM */}
-      <section className="py-20 px-6 bg-[#071c2d]">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-cyan-400 font-semibold tracking-[4px] text-sm">
+      <section className="bg-[#071826] py-24">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-cyan-400 tracking-[4px] text-sm font-semibold">
             GEYİKLİ'DE BALIK RESTORANI
           </p>
 
-          <h2 className="text-3xl md:text-5xl font-bold mt-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
             Denizden Sofranıza
           </h2>
 
-          <p className="text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed">
+          <p className="text-gray-300 leading-8 text-lg mt-8">
             Balıkçı Halil Geyikli olarak günlük taze balıklarımız, deniz
             ürünlerimiz ve Ege usulü mezelerimizle Geyikli'de keyifli bir
             balık sofrası için sizleri bekliyoruz. Samimi bahçemizde taze
@@ -76,7 +76,7 @@ export default function Home() {
 
           <a
             href="/menu"
-            className="inline-block mt-8 text-cyan-300 hover:text-cyan-200 font-semibold transition"
+            className="inline-block mt-8 text-cyan-400 hover:text-cyan-300 font-semibold transition"
           >
             Menüyü incele →
           </a>
@@ -84,9 +84,9 @@ export default function Home() {
       </section>
 
       {/* GEYİKLİ REHBERİ */}
-      <section className="py-24 px-6 bg-[#0b2538]">
+      <section className="bg-[#0b2538] py-24 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-cyan-400 font-semibold tracking-[4px] text-sm">
+          <p className="text-cyan-400 tracking-[4px] text-sm font-semibold">
             BU TOPRAKLARIN HİKÂYESİ
           </p>
 
@@ -94,15 +94,54 @@ export default function Home() {
             Geyikli Rehberi
           </h2>
 
-          <p className="text-gray-300 max-w-2xl mx-auto mt-6 leading-relaxed">
+          <p className="text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed">
             Geyikli'nin tarihi sokaklarını, Odunluk İskelesi'nin geçmişini,
             Dalyan'ın güzelliklerini ve bu güzel coğrafyanın hikâyelerini
-            birlikte tanıyalım.
+            birlikte tanıyalım. Tarihi yerleri, eski fotoğrafları ve
+            keşfedilmeyi bekleyen güzel noktaları inceleyin.
           </p>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div className="bg-[#10304f] rounded-2xl p-8">
+              <div className="text-4xl">🏛️</div>
+
+              <h3 className="text-xl font-bold mt-4">
+                Tarihi Yerler
+              </h3>
+
+              <p className="text-gray-400 mt-3">
+                Bölgenin tarihini ve kültürel mirasını keşfedin.
+              </p>
+            </div>
+
+            <div className="bg-[#10304f] rounded-2xl p-8">
+              <div className="text-4xl">📷</div>
+
+              <h3 className="text-xl font-bold mt-4">
+                Eski Fotoğraflar
+              </h3>
+
+              <p className="text-gray-400 mt-3">
+                Geyikli ve çevresinin geçmişine fotoğraflarla yolculuk yapın.
+              </p>
+            </div>
+
+            <div className="bg-[#10304f] rounded-2xl p-8">
+              <div className="text-4xl">📍</div>
+
+              <h3 className="text-xl font-bold mt-4">
+                Gezilecek Yerler
+              </h3>
+
+              <p className="text-gray-400 mt-3">
+                Keşfedilecek güzel sahil noktalarını ve özel yerleri bulun.
+              </p>
+            </div>
+          </div>
 
           <a
             href="/kesfet"
-            className="inline-block mt-10 bg-cyan-500 hover:bg-cyan-600 text-white px-9 py-4 rounded-full font-bold transition shadow-lg"
+            className="inline-block mt-12 bg-cyan-500 hover:bg-cyan-600 transition px-9 py-4 rounded-full font-bold shadow-lg"
           >
             Geyikli Rehberi'ni İncele →
           </a>
